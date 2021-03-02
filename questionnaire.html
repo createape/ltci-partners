@@ -1,323 +1,1534 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/hamburgers.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Questionnaire</title>
-  </head>
-  <body class="gray-body">
-    <header class="header green">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="#">
-            <img src="./images/white__logo.svg" alt="logo" width="246" loading="lazy"> <span>Health Questionnaire</span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <!-- <span class="navbar-toggler-icon"></span> -->
-              <div class="hamburger hamburger--squeeze">
-                <div class="hamburger-box">
-                  <div class="hamburger-inner"></div>
-                </div>
-              </div>
-            </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-              <li class="nav-item">
-                <a class="nav-link" href="#">Need help?</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link btn btn-primary btn-3 btn-green-transparent" href="#"> <img src="./images/icon__chat__1.svg" alt="Chat with us">  Chat with us</a>
-              </li>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/hamburgers.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Questionnaire</title>
+</head>
 
-            </ul>
+<body class="gray-body">
+  <div class="loading">
+    <img src="https://f.hubspotusercontent30.net/hubfs/405630/logo-min.png" alt="loading">
+  </div>
+  <header class="header green">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+          <img src="./images/white__logo.svg" alt="logo" width="246" loading="lazy"> <span>Health Questionnaire</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <div class="hamburger hamburger--squeeze">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
           </div>
-        </nav>
-      </div>
-    </header>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
 
-    <section class="hero-2 mb-5">
-        <div class="container pt-5 pb-5 max-width-1000 text-center">
-          <div class="pre-title text-uppercase pt-5 font-weight-bold">
-            Section 1
-          </div>
-          <h1 class="title-1 text-white mb-4">About You</h1>
-          <div class="text mb-5 pb-5 text-white">
-            <p>Honest and complete health information will help us provide a more accurate quote. This information is used only to assist you with this insurance. We will review the information, shop for the best value, and email you quotes based on popular plan designs.</p>
-          </div>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Need help?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-primary btn-3 btn-green-transparent" href="#"> <img
+                  src="./images/icon__chat__1.svg" alt="Chat with us"> Chat with us</a>
+            </li>
+
+          </ul>
         </div>
-    </section>
+      </nav>
+    </div>
+  </header>
 
-    <section>
-      <div class="form-body container max-width-1060">
-        <form id="formMultiStep" class="form-container">
-          <div class="form-item" data-title="About You">
-            <ol class="custom-list-number no-circle">
-              <li class="pb-5 is-invalid">
-                <label class="title-5 mb-3" for="">First, let’s get to know each other, what’s your name?</label>
-                <input type="text" class="form-control " required>
-              </li>
-              <li class="pb-5">
-                <label class="title-5 mb-3" for="">Perfect, what’s your email address?</label>
-                <p class="text-4-2">We’ll use this to get in touch with you after the survey is completed. We promise not to spam you.</p>
-                <input type="text" class="form-control" required>
-              </li>
-              <li class="pb-5">
-                <label class="title-5 mb-3" for="">What’s your phone number? <span class="text-muted">(optional)</span></label>
-                <p class="text-4-2">Not required but helpful.</p>
-                <input type="text" class="form-control" >
-              </li>
-              <li class="pb-5">
-                <label class="title-5 mb-3" for="">Date of birth</label>
-                <p class="text-4-2">mm/dd/yyyy</p>
-                <input type="date" class="form-control" required>
-              </li>
-              <li class="pb-5">
-                <label class="title-5 mb-3" for="">Height and Weight</label>
-                <div class="row">
-                  <div class="col-6">
-                    <input type="text" class="form-control" placeholder="Height (feet and inches)..." required>
-                  </div>
-                  <div class="col-6">
-                    <input type="text" class="form-control" placeholder="Weight (pounds)..." required>
-                  </div>
-                </div>
-              </li>
-              <li class="pb-5">
-                <label class="title-5 mb-4" for="">Gender</label>
-                <div>
-                  <span class="custom-radio">
-                    <span class="radio-text">Male</span>
-                    <input type="radio" name="test1"  id="test1" required>
-                    <span class="checkmark"></span>
-                  </span>
-                  <span class="custom-radio">
-                    <span class="radio-text">Female</span>
-                    <input type="radio" name="test1" id="test1" required>
-                    <span class="checkmark"></span>
-                  </span>
-                </div>
-
-              </li>
-              <li class="pb-5">
-                <label class="title-5 mb-3" for="">State of residence</label>
-                <select name="" class="form-control" id="" required>
-                  <option disabled selected value>Select State...</option>
-                  <option value="1">Florida</option>
-                  <option value="1">Florida</option>
-                </select>
-              </li>
-
-              <li class="pb-5">
-                <label class="title-5 mb-3" for="">Nearest metropolitan area? <span class="text-muted">(optional)</span></label>
-                <input type="text" class="form-control">
-              </li>
-              <li class="pb-5">
-                <label class="title-5 mb-4" for="">Marital Status</label>
-                <div>
-                  <span class="custom-radio">
-                    <span class="radio-text">Married</span>
-                    <input type="radio" name="test2" value="Married" required>
-                    <span class="checkmark"></span>
-                  </span>
-                  <span class="custom-radio">
-                    <span class="radio-text">Unmarried</span>
-                    <input type="radio" name="test2" value="Unmarried" required>
-                    <span class="checkmark"></span>
-                  </span>
-                  <span class="custom-radio">
-                    <span class="radio-text">Unmarried but in a commited relationship and living together at least 3 years</span>
-                    <input type="radio" name="test2" value="Unmarried but in a commited relationship and living together at least 3 years"  required>
-                    <span class="checkmark"></span>
-                  </span>
-                </div>
-
-              </li>
-              <li class="pb-5  condicional-diplay" data-name="test2" data-value="Married">
-                <label class="title-5 mb-4" for="">Is your spouse/partner interested in a quote ?</label>
-                <div>
-                  <span class="custom-radio">
-                    <span class="radio-text">No</span>
-                    <input type="radio" name="test3" class="no-count">
-                    <span class="checkmark"></span>
-                  </span>
-                  <div></div>
-                  <span class="custom-radio">
-                    <span class="radio-text">Yes - enter their first and the las name. They will need to complete their own health questionnarie</span>
-                    <input type="radio" name="test3" class="no-count">
-                    <span class="checkmark"></span>
-                  </span>
-
-                </div>
-                <input type="text" placeholder="Full Name" class="form-control no-count">
-              </li>
-
-            </ol>
-
-          </div>
-          <div class="form-item" data-title="About You 2">
-            <ol class="custom-list-number no-circle">
-              <li class="pb-5">
-                <label class="title-5 mb-3" for="">First 2, let’s get to know each other, what’s your name?</label>
-                <input type="text" class="form-control" >
-              </li>
-              <li class="pb-5">
-                <label class="title-5 mb-3" for="">Perfect, what’s your email address?</label>
-                <p class="text-4-2">We’ll use this to get in touch with you after the survey is completed. We promise not to spam you.</p>
-                <input type="text" class="form-control">
-              </li>
-              <li class="pb-5">
-                <label class="title-5 mb-3" for="">What’s your phone number? <span class="text-muted">(optional)</span></label>
-                <p class="text-4-2">Not required but helpful.</p>
-                <input type="text" class="form-control">
-              </li>
-
-
-            </ol>
-
-          </div>
-        </form>
+  <section id="hero-2-green" class="hero-2">
+    <div class="container pt-5 pb-5 max-width-1000 text-center">
+      <div class="pre-title text-uppercase pt-5 font-weight-bold">
+        Section 1
       </div>
-    </section>
+      <h1 class="title-1 text-white mb-4">About You</h1>
+      <div class="text mb-5 pb-5 text-white">
+        <p>Honest and complete health information will help us provide a more accurate quote. This information is used
+          only to assist you with this insurance. We will review the information, shop for the best value, and email you
+          quotes based on popular plan designs.</p>
+      </div>
+    </div>
+    <input type="hidden" value="Example page" id="pageName">
+  </section>
+  <div class="mb-5"></div>
 
-      <div class="form-footer">
-        <div class="container">
-          <div class="form-footer-container d-flex">
-            <div class="form-footer-btn-prev">
-              <button id="prevBtn" class="btn btn-3 btn-green-2">Previous</button>
-            </div>
-            <div class="form-footer-progress">
-              <div class="progress mb-1">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <div class="text-center pt-1">
-                <span class="text-5"> <b id="step-title">About You</b>   -  <span id="step-answered">0</span>  of <span id="step-questions">9</span> answered</span>
-              </div>
+  <section id="thankyoupage" class="pt-5 mt-5 d-none">
 
+    <div class="container max-width-550">
+      <div class="text-center">
+        <img class="mb-5 max-width-180" src="./images/check_list_thank_you.png" alt="HEalth Questionnaire">
 
-            </div>
-            <div class="form-footer-btn-next">
-              <button id="nextBtn"  class="btn btn-3 btn-primary">Next Section</button>
-              <button id="submitBtn"  class="btn btn-3 btn-primary d-none">Submit</button>
-            </div>
-          </div>
+        <h2 class="title-1 max-width-960 text-center mb-3">Thank you!</h2>
+        <div class="text">
+          <p>
+            Your information has been received.
+          </p>
+        </div>
+
+        <div class="text">
+          <p><span class="line-spacing">Now</span></p>
+        </div>
+
+        <div class="text mb-5">
+          <p>
+            Click the button bellow If you want to continue with the quote for <span id="next-form-name">Jenny</span>
+          </p>
+        </div>
+
+        <div class="text-center mb-4">
+          <a href="#" id="reset-the-form" class="btn btn-primary btn-1 min-width-300">Ok, let’s do it!</a>
+        </div>
+
+        <div class="text">
+          <p><span class="line-spacing">Or</span></p>
+        </div>
+
+        <div class="text mb-5 pb-5">
+          <p>
+            You can close this page and one of our specialist will get in touch with you.
+          </p>
         </div>
       </div>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-5">
-            <div class="footer-logo">
-              <a href="#"><img src="./images/footer-logo.png" alt=""></a>
-            </div>
-            <ul class="footer-social">
-              <li><a href="#"><img src="./images/footer-facebook.svg" alt="facebook"></a></li>
-              <li><a href="#"><img src="./images/footer-twitter.svg" alt="facebook"></a></li>
-              <li><a href="#"><img src="./images/footer-in.svg" alt="facebook"></a></li>
-            </ul>
-            <div class="text-5 font-weight-400 mb-4">
-              © LTCI  -  2020
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-7">
-            <div class="row">
-              <div class="col-sm-6 col-md-3">
-                <h4 class="text-small text-green text-uppercase font-weight-bold">Contact us</h4>
-                <p class="text-6">
-                  <a href="tel:855-632-4582">(855) 632-4582</a>
-                </p>
-                <p class="text-6">
-                  <a href="mailto:nea@ltcipartners.com">nea@ltcipartners.com</a>
-                </p>
-                <p class="text-6">
-                  Monday - Friday <br> 8:00am - 5:00pm CT
-                </p>
-                <p class="text-6">
-                  100 N Field Drive Suite 310, Lake Forest, IL 60045
-                </p>
+
+
+
+    </div>
+
+
+  </section>
+
+
+  <section id="main-form-container">
+    <div class="form-body container max-width-1060">
+      <form id="formMultiStep" class="form-container">
+        <div class="form-item" data-title="ABOUT YOU">
+          <ol class="custom-list-number no-circle">
+            <li class="pb-5 is-invalid element-1">
+              <label class="title-5 mb-3" for="">First, let’s get to know each other, what’s your name?</label>
+              <input type="text" name="firstname" class="form-control" required>
+            </li>
+            <li class="pb-5 element-2">
+              <label class="title-5 mb-3" for="">Perfect, what’s your email address?</label>
+              <p class="text-4-2">We’ll use this to get in touch with you after the survey is completed. We promise not
+                to spam you.</p>
+              <input type="email" class="form-control" name="email" required>
+            </li>
+            <li class="pb-5 element-3">
+              <label class="title-5 mb-3" for="">What’s your phone number? <span
+                  class="text-muted">(optional)</span></label>
+              <p class="text-4-2">Not required but helpful.</p>
+              <input type="text" class="form-control" name="phone">
+            </li>
+            <li class="pb-5 element-4">
+              <label class="title-5 mb-3" for="">Date of birth</label>
+              <p class="text-4-2">dd/mm/yyyy</p>
+              <input type="date" class="form-control" name="date_of_birth" min="1930-01-01" max="2030-12-31" required>
+            </li>
+            <li class="pb-5 element-5">
+              <label class="title-5 mb-3" for="">Height and Weight</label>
+              <div class="row">
+                <div class="col-6">
+                  <input type="number" class="form-control" name="height" min="1" placeholder="Height (feet and inches)..."
+                    required>
+                </div>
+                <div class="col-6">
+                  <input type="number" class="form-control" name="weight" min="1" placeholder="Weight (pounds)..." required>
+                </div>
+              </div>
+            </li>
+            <li class="pb-5 element-6">
+              <label class="title-5 mb-4" for="">Gender</label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">Male</span>
+                  <input type="radio" value="Male" name="gender" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Female</span>
+                  <input type="radio" value="Female" name="gender" required>
+                  <span class="checkmark"></span>
+                </span>
               </div>
 
-              <div class="col-sm-6 col-md-3">
-                <h4 class="text-small text-green text-uppercase font-weight-bold">Site Blocks</h4>
-                <p class="text-6">
-                  <a href="#">Discover</a>
-                </p>
-                <p class="text-6">
-                  <a href="#">What is Long Term Care?</a>
-                </p>
-                <p class="text-6">
-                  <a href="#">Why Insurance?</a>
-                </p>
-                <p class="text-6">
-                  <a href="#">How does the Insurance Work?</a>
-                </p>
-                <p class="text-6">
-                  <a href="#">About us</a>
-                </p>
+            </li>
+            <li class="pb-5 element-7">
+              <label class="title-5 mb-3" for="">State of residence</label>
+              <select class="form-control" name="state_of_residence" required>
+                <option disabled selected value>Select State...</option>
+
+              <option value="Alabama">Alabama </option>
+              <option value="Alaska" >Alaska</option>
+              <option value="Arizona" >Arizona </option>
+              <option value="Arkansas" >Arkansas </option>
+              <option value="California" >California </option>
+              <option value="Colorado" >Colorado </option>
+              <option value="Connecticut" > Connecticut</option>
+              <option value="Delaware" >Delaware </option>
+              <option value="Florida" >Florida </option> </option>
+              <option value="Hawaii" >Hawaii</option>
+              <option value="Idaho" >Idaho</option>
+              <option value="Illinois" >Illinois </option>
+              <option value="Indiana" >Indiana </option>
+              <option value="Iowa" >Iowa</option>
+              <option value="Kansas" >Kansas</option>
+              <option value="Kentucky" >Kentucky </option>
+              <option value="Louisiana" >Louisiana </option>
+              <option value="Maine" >Maine</option>
+              <option value="Maryland" >Maryland </option>
+              <option value="Massachusetts" > Massachusetts</option>
+              <option value="Michigan" >Michigan </option>
+              <option value="Minnesota" >Minnesota </option>
+              <option value="Mississippi">Mississippi</option>
+              <option value="Missouri" >Missouri </option>
+              <option value="Montana" >Montana </option>
+              <option value="Nebraska" >Nebraska </option>
+              <option value="Nevada" >Nevada</option>
+              <option value="New Hampshire" >New Hampshire</option>
+              <option value="New Jersey" >New Jersey </option>
+              <option value="New Mexico" >New Mexico </option>
+              <option value="New York" >New York </option>
+              <option value="North Carolina" >North Carolina</option>
+              <option value="North Dakota" >North Dakota</option>
+              <option value="Ohio" >Ohio</option>
+              <option value="Oklahoma" >Oklahoma </option>
+              <option value="Oregon" >Oregon</option>
+              <option value="Pennsylvania" >Pennsylvania</option>
+              <option value="Rhode Island" >Rhode Island</option>
+              <option value="South Carolina" >South Carolina</option>
+              <option value="South Dakota" >South Dakota</option>
+              <option value="Tennessee" >Tennessee</option>
+              <option value="Texas" >Texas</option>
+              <option value="Utah" >Utah</option>
+              <option value="Vermont" >Vermont </option>
+              <option value="Virginia" >Virginia </option>
+              <option value="Washington" >Washington </option>
+              <option value="West Virginia" >West Virginia</option>
+              <option value="Wisconsin" >Wisconsin </option>
+              <option value="Wyoming" >Wyoming </option>
+            </select>
+
+
+            </li>
+
+
+            <li class="pb-5 element-8">
+              <label class="title-5 mb-3" for="">Nearest metropolitan area? <span
+                  class="text-muted">(optional)</span></label>
+              <input type="text" class="form-control" name="nearest_metropolitan_area_">
+            </li>
+            <li class="pb-5 element-9">
+              <label class="title-5 mb-4" for="">Marital Status</label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">Married</span>
+                  <input type="radio" name="marital_status" value="Married" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Single</span>
+                  <input type="radio" name="marital_status" value="Single" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Unmarried but in a commited relationship and living together at least 3
+                    years</span>
+                  <input type="radio" name="marital_status" value="Common Law" required>
+                  <span class="checkmark"></span>
+                </span>
               </div>
 
-              <div class="col-sm-6 col-md-3">
-                <h4 class="text-small text-green text-uppercase font-weight-bold">Learn & Explore</h4>
-            <p class="text-6">
-              <a href="#">Educational Videos</a>
-            </p>
-            <p class="text-6">
-              <a href="#">Care Cost Calculator</a>
-            </p>
-            <p class="text-6">
-              <a href="#">Sample Rates</a>
-            </p>
+            </li>
+            <li class="pb-5  condicional-diplay element-10" data-name="marital_status" data-value="Married">
+              <label class="title-5 mb-4" for="">Is your spouse/partner interested in a quote ?</label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="Yes" name="is_your_spouse_partner_interested_in_a_quote__" class="no-count">
+                  <span class="checkmark"></span>
+                </span>
+                <div></div>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes</span>
+                  <input type="radio" value="Yes" name="is_your_spouse_partner_interested_in_a_quote__" class="no-count">
+                  <span class="checkmark"></span>
+                </span>
               </div>
-              <div class="col-sm-6 col-md-3">
-                <h4 class="text-small text-green text-uppercase font-weight-bold">Consultation</h4>
-            <p class="text-6">
-              <a href="#">Request a consultation</a>
-            </p>
-            <p class="text-6">
-              <a href="#">Open Health Questionnaire</a>
-            </p>
-              </div>
-            </div>
+              <p class="text-4-2">Enter their first and the last name. They will need to complete their own health
+                questionnarie</p>
+              <input type="text" placeholder="Full Name" name="enter_their_first_and_the_last_name"
+                class="form-control no-count">
+            </li>
 
-          </div>
+          </ol>
 
         </div>
-        <hr class="mb-5 mt-4">
-        <div class="text footer-text">
-          <p>LTCI Partner’s was selected by the National Education Association Member Benefits Corporation to help NEA members with his important planning. LTCI Partner’s is the only NEA endorsed provider for long term care insurance. </p>
-          <p>LTCI Partner’s, LLC, (LTCI Partners) acts as an agent for select insurance companies to provide long-term care insurance under this program. Invitations for application for LTC Insurance are made through LTCI Partners. LTCI Partners or its licensed representatives are currently licensed in all 50 states and the District of Columbia. License numbers are available upon request. LTCI Partners receives commissions from insurance carriers, which include compensation based on total quantity and quality of insurance coverage.</p>
-          <p>The long-term care insurance policy describes coverages under the policy, exclusions and limitations, what you must do to keep your policy in force, and what would cause your policy to be discontinued. Please contact your licensed agent for more information, costs, and complete details on coverage. Availability of policies, features, and benefits may vary by state.</p>
-          <p>An insurance agent may contact you. Premiums vary by issue age and health and for some plans may be increased in the future. Long-term care insurance is underwritten by the insurance company we help you select. The policy is subject to underwriting and a medical exam may be required to determine eligibility.</p>
-          <p>2020 LTCI Partners, LLC</p>
+        <div class="form-item" data-title="CERTAIN CONDITIONS OR NEED FOR ASSISTANCE">
+          <ol class="custom-list-number no-circle">
+            <li class="pb-5 element-11">
+              <label class="title-5 mb-3" for="">Do you currently have or have you ever been diagnosed with any of the
+                following?</label>
+              <p class="text-4-2">Alzheimer’s Disease, Amyotrophic Lateral Sclerosis (ALS/Lou Gehrig’s Disease), Cystic
+                Fibrosis, Dementia, Huntington’s Chorea, Memory Loss, Mental Retardation, Multiple Myeloma, Multiple
+                Sclerosis, Muscular Dystrophy, Myasthenia Gravis, Parkinson’s Disease, Schizophrenia, or Spinal Cord
+                Injury</p>
+              <p class="text-4-2 text-green font-weight-bold">and/or</p>
+              <p class="text-4-2">Acquired immune deficiency syndrome (AIDS), AIDS-related complex (ARC), or tested
+                positive for the Human Immunodeficiency Virus (HIV)
+              </p>
+              <p class="text-4-2 text-green font-weight-bold">and/or</p>
+              <p class="text-4-2">Do you currently need assistance with bathing, dressing, or mobility, including using
+                a cane, crutch or walker?</p>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No"
+                    name="do_you_currently_have_or_have_you_ever_been_diagnosed_with_any_of_the_following_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes</span>
+                  <input type="radio" value="Yes"
+                    name="do_you_currently_have_or_have_you_ever_been_diagnosed_with_any_of_the_following_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay"
+                data-name="do_you_currently_have_or_have_you_ever_been_diagnosed_with_any_of_the_following_"
+                data-value="Yes">
+                <p class="text-4-2 font-weight-bold pt-4">
+                  Based on your answers, it is unlikely you will qualify for a long term care insurance policy. We
+                  recommend you contact us to confirm this. You are welcome to continue with the questionnaire and we
+                  will contact you to discuss further before we can provide a quote.
+                </p>
+              </div>
+            </li>
+
+          </ol>
+
+        </div>
+        <div class="form-item" data-title="CERTAIN CONDITIONS OR NEED FOR ASSISTANCE">
+          <ol class="custom-list-number no-circle">
+            <li class="pb-5 element-12">
+              <label class="title-5 mb-3" for="">Is there a family history of Huntington’s Disease?</label>
+
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="is_there_a_family_history_of_huntington_s_disease_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes</span>
+                  <input type="radio" value="Yes" name="is_there_a_family_history_of_huntington_s_disease_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+
+            </li>
+            <li class="pb-5 condicional-diplay element-13" data-name="is_there_a_family_history_of_huntington_s_disease_"
+              data-required="true" data-value="Yes">
+              <p class="text-4">The types of coverage options available for individuals with a family history of
+                Huntington’s Disease will depend on whether or not you have had the specific testing to determine you do
+                not have Huntington’s.</p>
+              <p class="text-4">The types of coverage options available for individuals with a family history of
+                Huntington’s Disease will depend on whether or not you have had the specific testing to determine you do
+                not have Huntington’s.</p>
+              <ul class="pb-3">
+                <li class="text-4">Answer <span class="font-weight-bold text-green">NO</span> if you have <span
+                    class="font-weight-bold text-green">not been tested</span>. Continue with this questionnaire (we may
+                  still have options for insuring you).</li>
+                <li class="text-4">Answer <span class="font-weight-bold text-green">YES</span> if you have been <span
+                    class="font-weight-bold text-green">tested and are negative</span> for Huntington’s. Continue with
+                  the questionnaire.</li>
+              </ul>
+              <p class="text-4 text-red">If you have had the testing and <span class="font-weight-bold text-red">are
+                  positive for Huntington’s</span>, unfortunately we do not have any insurance options available to you.
+                You can close this window and your responses will not be saved.</p>
+
+              <label class="title-5 mb-3" for=""> I have had testing to determine whether or not I have
+                Huntington’s</label>
+
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No, I have not been tested for Huntington’s </span>
+                  <input type="radio" value="No, I have not been tested for Huntington’s"
+                    name="i_have_had_testing_to_determine_whether_or_not_i_have_huntington_s">
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes, I had the testing and I am negative for Huntington’s </span>
+                  <input type="radio" value="Yes, I had the testing and I am negative for Huntington’s"
+                    name="i_have_had_testing_to_determine_whether_or_not_i_have_huntington_s">
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+
+            </li>
+
+          </ol>
+
+        </div>
+        <div class="form-item" data-title="COVID">
+          <ol class="custom-list-number no-circle">
+            <li class="pb-5 element-14">
+              <label class="title-5 mb-3" for=""> Have you been outside the United States in the last three months?
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No"
+                    name="have_you_been_outside_the_united_states_in_the_last_three_months_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes"
+                    name="have_you_been_outside_the_united_states_in_the_last_three_months_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="have_you_been_outside_the_united_states_in_the_last_three_months_" data-value="Yes">
+                <p class="text-4">Provide the details on countries you visited and date(s) you returned to the United
+                  States</p>
+                <textarea class="form-control"
+                  name="provide_the_details_on_countries_you_visited_and_date_s__you_returned_to_the_united_states" id=""
+                  cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+            <li class="pb-5 element-15">
+              <label class="title-5 mb-3" for="">Have you ever tested positive for Covid-19 or currently experiencing a
+                fever, cough, or shortness of breath?
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No"
+                    name="have_you_ever_tested_positive_for_covid_19_or_currently_experiencing_a_fever__cough__or_shortness_o"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes"
+                    name="have_you_ever_tested_positive_for_covid_19_or_currently_experiencing_a_fever__cough__or_shortness_o"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+
+              <div class="condicional-diplay" data-name="have_you_ever_tested_positive_for_covid_19_or_currently_experiencing_a_fever__cough__or_shortness_o" data-value="Yes">
+                <p class="text-4">Provide details of date of diagnosis, treatment, and current state of symptoms, health
+                  and ongoing treatments or medications.</p>
+                <textarea class="form-control"
+                  name="provide_details_of_date_of_diagnosis__treatment__and_current_state_of_symptoms__health_and_ongoing_"
+                  id="" cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+
+            <li class="pb-5 element-16">
+              <label class="title-5 mb-3" for="">As far as you know, have you been exposed to someone who has or had
+                Covid-19?
+
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No"
+                    name="as_far_as_you_know__have_you_been_exposed_to_someone_who__has_or_had_covid_19_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes"
+                    name="as_far_as_you_know__have_you_been_exposed_to_someone_who__has_or_had_covid_19_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+
+                <div class="condicional-diplay" data-name="as_far_as_you_know__have_you_been_exposed_to_someone_who__has_or_had_covid_19_" data-value="Yes">
+                  <p class="text-4">Please explain circumstances and date you were exposed</p>
+                  <textarea class="form-control" name="please_explain_circumstances_and_date_you_were_exposed" id="" cols="30" rows="5" required></textarea>
+                </div>
+            </li>
+
+          </ol>
+        </div>
+
+        <div class="form-item" data-title="GENERAL HEALTH">
+          <ol class="custom-list-number no-circle">
+            <li class="pb-5 element-17">
+              <label class="title-5 mb-3" for=""> Has it been over two years since your last physical? (including lab
+                work)
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No"
+                    name="has_it_been_over_two_years_since_your_last_physical___including_lab_work_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes"
+                    name="has_it_been_over_two_years_since_your_last_physical___including_lab_work_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <p class="text-4">If you are age 60 or older, one is needed before you can apply as the insurance company
+                relies on the results of your last physical. You may continue to receive a quote; however, please call
+                your doctor and schedule a physical if necessary. </p>
+
+            </li>
+            <li class="pb-5 element-18">
+              <label class="title-5 mb-3" for="">Do you recall your last blood pressure reading?
+
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="do_you_recall_your_last_blood_pressure_reading_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="do_you_recall_your_last_blood_pressure_reading_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="do_you_recall_your_last_blood_pressure_reading_" data-value="Yes">
+                <p class="text-4">Please provide the reading or approximate reading</p>
+                <textarea class="form-control" name="please_provide_the_reading_or_approximate_reading" id="" cols="30"
+                  rows="5" required></textarea>
+              </div>
+
+            </li>
+
+            <li class="pb-5 element-19">
+              <label class="title-5 mb-3" for="">Any tobacco use in the last 5 years?
+
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="any_tobacco_use_in_the_last_5_years_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="any_tobacco_use_in_the_last_5_years_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+
+            </li>
+
+
+
+
+          </ol>
+        </div>
 
 
 
 
 
+
+
+
+        <div class="form-item" data-title="GENERAL HEALTH">
+          <ol class="custom-list-number no-circle">
+            <li class="pb-5 element-20">
+              <label class="title-5 mb-3" for="">Any hospitalizations, including day surgeries, in the last 10 years (if
+                yes, please include year)
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No"
+                    name="any_hospitalizations__including_day_surgeries__in_the_last_10_years__if_yes__please_include_year_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes"
+                    name="any_hospitalizations__including_day_surgeries__in_the_last_10_years__if_yes__please_include_year_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+              </div >
+              <div class="condicional-diplay" data-name="any_hospitalizations__including_day_surgeries__in_the_last_10_years__if_yes__please_include_year_" data-value="Yes">
+                <p class="text-4">Include reasons and approximate date (yes is sufficient) </p>
+                <textarea class="form-control" name="include_reasons_and_approximate_date__yes_is_sufficient_" id=""
+                  cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+            <li class="pb-5 element-21">
+              <label class="title-5 mb-3" for="">Do you have any doctor-recommended treatments, including physical or
+                occupational therapy, that have NOT BEEN STARTED or that have NOT BEEN COMPLETED?
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No"
+                    name="do_you_have_any_doctor_recommended_treatments__including_physical_or_occupational_therapy__that_hav"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes"
+                    name="do_you_have_any_doctor_recommended_treatments__including_physical_or_occupational_therapy__that_hav"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="do_you_have_any_doctor_recommended_treatments__including_physical_or_occupational_therapy__that_hav" data-value="Yes">
+                <p class="text-4">Explain the medical condition, the recommended or completed treatment, when it began/is
+                  scheduled to begin, and when it ended/is scheduled to end.
+                </p>
+                <textarea class="form-control"
+                  name="explain_the_medical_condition__the_recommended_or_completed_treatment__when_it_began_is_scheduled_t"
+                  id="" cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+
+            <li class="pb-5 element-23">
+              <label class="title-5 mb-3" for="">Have you ever had an application for Long Term Care declined?
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="have_you_ever_had_an_application_for_long_term_care_declined_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="have_you_ever_had_an_application_for_long_term_care_declined_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="have_you_ever_had_an_application_for_long_term_care_declined_" data-value="Yes">
+                <p class="text-4">Indicate the approximate month/year you applied, the reason for being declined, and the
+                  name of the insurance company. </p>
+                <textarea class="form-control"
+                  name="indicate_the_approximate_month_year_you_applied__the_reason_for_being_declined__and_the_name_of_the"
+                  id="" cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+
+
+
+          </ol>
+        </div>
+
+        <div class="form-item" data-title="SPECIFIC TREATMENTS">
+          <ol class="custom-list-number no-circle">
+            <li class="pb-5 element-22">
+              <label class="title-5 mb-3" for="">In the last 12 months, have you received any physical therapy or
+                occupational therapy?</label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No"
+                    name="in_the_last_12_months__have_you_received_any_physical_therapy_or_occupational_therapy_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes"
+                    name="in_the_last_12_months__have_you_received_any_physical_therapy_or_occupational_therapy_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="in_the_last_12_months__have_you_received_any_physical_therapy_or_occupational_therapy_" data-value="Yes">
+                <p class="text-4">Indicate the type of therapy, what it treated, when it began and when it ended </p>
+                <textarea class="form-control"
+                  name="indicate_the_type_of_therapy__what_it_treated__when_it_began_and_when_it_ended" id="" cols="30"
+                  rows="5" required></textarea>
+              </div>
+
+            </li>
+            <li class="pb-5 element-24">
+              <label class="title-5 mb-3" for="">Have you ever been diagnosed with Sleep Apnea?
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="have_you_ever_been_diagnosed_with_sleep_apnea_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="have_you_ever_been_diagnosed_with_sleep_apnea_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="have_you_ever_been_diagnosed_with_sleep_apnea_" data-value="Yes">
+                <p class="text-4">Provide date of diagnosis, when last sleep study was done, describe treatment such as
+                  CPAP, BIPAP, oxygen, and whether Sleep Apnea classified as mild, moderate, or severe
+                </p>
+                <textarea class="form-control"
+                  name="provide_date_of_diagnosis__when_last_sleep_study_was_done__describe_treatment_such_as_cpap__bipap__"
+                  id="" cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+
+            <li class="pb-5 element-25">
+              <label class="title-5 mb-3" for="">Have you ever had a Heart Attack?</label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="have_you_ever_had_a_heart_attack_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="have_you_ever_had_a_heart_attack_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="have_you_ever_been_diagnosed_with_sleep_apnea_" data-value="Yes">
+                <p class="text-4">Provide date(s) and treatment (bypass, stent, etc.) </p>
+                <textarea class="form-control" name="provide_date_s__and_treatment__bypass__stent__etc__" id="" cols="30"
+                  rows="5" required></textarea>
+              </div>
+
+            </li>
+            <li class="pb-5 element-26">
+              <label class="title-5 mb-3" for="">Have you been diagnosed with Anxiety or Depresssion</label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="have_you_been_diagnosed_with_anxiety_or_depression" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="have_you_been_diagnosed_with_anxiety_or_depression" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="have_you_been_diagnosed_with_anxiety_or_depression" data-value="Yes">
+                <p class="text-4">Indicate whether anxiety or depression. Explain what treatments have been prescribed,
+                  whether medication type and/or dosage has been changed in the last 12 months, dates of any
+                  hospitalizations for depression, and any date(s) of suicide attempt(s).</p>
+                <textarea class="form-control"
+                  name="indicate_whether_anxiety_or_depression__explain_what_treatments_have_been_prescribed__whether_medic"
+                  id="" cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+
+          </ol>
+        </div>
+
+        <div class="form-item" data-title="SPECIFIC TREATMENTS">
+          <ol class="custom-list-number no-circle">
+            <li class="pb-5 element-27">
+              <label class="title-5 mb-3" for="">Have you been diagnosed or treated by a Medical professional for mental
+                or nervous disorder EXCLUDING anxiety or mild depression
+
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No"
+                    name="have_you_been_diagnosed_or_treated_by_a_medical_professional_for_mental_or_nervous_disorder_excludi"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes"
+                    name="have_you_been_diagnosed_or_treated_by_a_medical_professional_for_mental_or_nervous_disorder_excludi"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div  class="condicional-diplay" data-name="have_you_been_diagnosed_or_treated_by_a_medical_professional_for_mental_or_nervous_disorder_excludi" data-value="Yes">
+                <p class="text-4">Please specify </p>
+                <textarea class="form-control" name="please_specify" id="" cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+            <li class="pb-5 element-28">
+              <label class="title-5 mb-3" for="">Within the past 36 months, have you been diagnosed or treated by a
+                medical professional or had surgery for any of the following: Congestive heart failure, kidney disease,
+                Cirrhosis, Paget’s disease, Lupus, or any connective tissue disorder?
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No"
+                    name="within_the_past_36_months__have_you_been_diagnosed_or_treated_by_a_medical_professional_or_had_surg"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes"
+                    name="within_the_past_36_months__have_you_been_diagnosed_or_treated_by_a_medical_professional_or_had_surg"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="within_the_past_36_months__have_you_been_diagnosed_or_treated_by_a_medical_professional_or_had_surg" data-value="Yes">
+                <p class="text-4">Please provide details such as diagnoses and treatment plan</p>
+                <textarea class="form-control" name="please_provide_details_such_as_diagnoses_and_treatment_plan" id=""
+                  cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+
+
+          </ol>
+        </div>
+
+        <div class="form-item" data-title="SPECIFIC TREATMENTS">
+          <ol class="custom-list-number no-circle">
+            <li class="pb-5 element-29">
+              <label class="title-5 mb-3" for="">Have you been diagnosed with Diabetes or pre-Diabetes?
+
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="have_you_been_diagnosed_with_diabetes_or_pre_diabetes_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="have_you_been_diagnosed_with_diabetes_or_pre_diabetes_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="have_you_been_diagnosed_with_diabetes_or_pre_diabetes_" data-value="Yes">
+                <p class="text-4">If yes, provide: Whether Type 1 or Type 2, the approximate year you were diagnosed, the
+                  result of your most recent A1C reading, and how that compares to readings over the past few years
+                  (higher, lower, stable). Indicate if any history of neuropathy, nephropathy, retinopathy, or any
+                  amputations.
+                </p>
+                <textarea class="form-control"
+                  name="if_yes__provide__whether_type_1_or_type_2__the_approximate_year_you_were_diagnosed__the_result_of_y"
+                  id="" cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+            <li class="pb-5 element-30">
+              <label class="title-5 mb-3" for="">Have you been diagnosed with Rheumatoid Arthritis or Osteoarthritis?
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No"
+                    name="have_you_been_diagnosed_with_rheumatoid_arthritis_or__osteoarthritis_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes"
+                    name="have_you_been_diagnosed_with_rheumatoid_arthritis_or__osteoarthritis_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="have_you_been_diagnosed_with_rheumatoid_arthritis_or__osteoarthritis_" data-value="Yes">
+                <p class="text-4">Please provide details such as joint(s) involved, the level of severity, any limitation
+                  to your physical activity, and whether you have had any joint replacements.
+                </p>
+                <textarea class="form-control"
+                  name="please_provide_details_such_as_joint_s__involved__the_level_of_severity__any_limitation_to_your_phy"
+                  id="" cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+            <li class="pb-5 element-31">
+              <label class="title-5 mb-3" for="">Have you ever had a Stroke, TIA or CVA? </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="have_you_ever_had_a_stroke__tia_or_cva_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="have_you_ever_had_a_stroke__tia_or_cva_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="have_you_ever_had_a_stroke__tia_or_cva_" data-value="Yes">
+                <p class="text-4">Indicate whether Stroke, TIA or CVA and include the month and year, whether it was a
+                  single episode or recurrence, and if you have any physical limitations as a result.</p>
+                <textarea class="form-control"
+                  name="indicate_whether_stroke__tia_or_cva_and_include_the_month_and_year__whether_it_was_a_single_episode"
+                  id="" cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+
+
+          </ol>
+        </div>
+
+        <div class="form-item" data-title="SPECIFIC TREATMENTS">
+          <ol class="custom-list-number no-circle">
+            <li class="pb-5 element-32">
+              <label class="title-5 mb-3" for="">Have you ever been diagnosed with Osteoporosis?</label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="have_you_ever_been_diagnosed_with_osteoporosis_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="have_you_ever_been_diagnosed_with_osteoporosis_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="have_you_ever_been_diagnosed_with_osteoporosis_" data-value="Yes">
+                <p class="text-4">If yes, provide: Whether Type 1 or Type 2, the approximate year you were diagnosed, the
+                  result of your most recent A1C reading, and how that compares to readings over the past few years
+                  (higher, lower, stable). Indicate if any history of neuropathy, nephropathy, retinopathy, or any
+                  amputations.
+                </p>
+                <textarea class="form-control"
+                  name="provide_details_on_joint_s__involved__your_t_scores_if_you_know_them__whether_there_are_any_functio"
+                  id="" cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+            <li class="pb-5 element-33">
+              <label class="title-5 mb-3" for="">Have you even been diagnosed with Cancer? </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="have_you_even_been_diagnosed_with_cancer_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="have_you_even_been_diagnosed_with_cancer_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="have_you_even_been_diagnosed_with_cancer_" data-value="Yes">
+                <p class="text-4">Indicate year, location of cancer, stage, treatment you received, and whether or not the
+                  cancer recurred. For skin cancers, indicate if basal cell, squamous cell, or the stage of melanoma.</p>
+                <textarea class="form-control"
+                  name="indicate_year__location_of_cancer__stage__treatment_you_received__and_whether_or_not_the_cancer_rec"
+                  id="" cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+
+
+
+          </ol>
+        </div>
+
+        <div class="form-item" data-title="SPECIFIC TREATMENTS">
+          <ol class="custom-list-number no-circle">
+            <li class="pb-5 element-35">
+              <label class="title-5 mb-3" for="">Within the past 24 months have you: </label>
+              <ul>
+                <li class="text-4">been prescribed the use of oxygen by a medical professional </li>
+                <li class="text-4">has any type of amputation caused by a disease?</li>
+                <li class="text-4">been hospitalized THREE or more time for ANY reason?</li>
+                <li class="text-4">had any lunch or respiratory disorder requiring the use of a nebulizer or oxygen, or
+                  3 or more medications for lung or respiratory disorder?</li>
+              </ul>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="within_the_past_24_months_have_you_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="within_the_past_24_months_have_you_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="within_the_past_24_months_have_you_" data-value="Yes">
+                <p class="text-4">Explain </p>
+                <textarea class="form-control" name="explain" id="" cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+            <li class="pb-5 element-36">
+              <label class="title-5 mb-3" for="">Within the past 12 months have you:</label>
+              <ul>
+                <li class="text-4">been advised by a medical professional to have a treatment, further evaluation,
+                  diagnostic testing, or have test results pending?</li>
+                <li class="text-4">been diagnosed or treated by a medical professional for any type of seizure?</li>
+                <li class="text-4">been advised by a medical professional that surgery may be required within the next
+                  year for any existing health condition including joint replacement?</li>
+                <li class="text-4">been recommended or advised by a medical professional to have treatment or counseling
+                  for alcohol or drug abuse?</li>
+              </ul>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="within_the_past_12_months_have_you_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="within_the_past_12_months_have_you_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="within_the_past_12_months_have_you_" data-value="Yes">
+                <p class="text-4">Please provide details</p>
+                <textarea class="form-control" name="please_provide_details" id="" cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+
+
+
+          </ol>
+        </div>
+
+        <div class="form-item" data-title="FAMILY HISTORY">
+          <ol class="custom-list-number no-circle">
+            <li class="pb-5 element-34">
+              <label class="title-5 mb-3" for="">Has any of these biological relatives been diagnosed with Alzheimer’s
+                or other forms of dementia?</label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">Mother</span>
+                  <input type="radio" value="Mother"
+                    name="has_any_of_these_biological_relatives_been_diagnosed_with_alzheimer_s_or_other_forms_of_dementia_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Father </span>
+                  <input type="radio" value="Father"
+                    name="has_any_of_these_biological_relatives_been_diagnosed_with_alzheimer_s_or_other_forms_of_dementia_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Both Parents </span>
+                  <input type="radio" value="Both Parents"
+                    name="has_any_of_these_biological_relatives_been_diagnosed_with_alzheimer_s_or_other_forms_of_dementia_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">One Sibling </span>
+                  <input type="radio" value="One Sibling"
+                    name="has_any_of_these_biological_relatives_been_diagnosed_with_alzheimer_s_or_other_forms_of_dementia_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Two or more siblings </span>
+                  <input type="radio" value="Two or more siblings"
+                    name="has_any_of_these_biological_relatives_been_diagnosed_with_alzheimer_s_or_other_forms_of_dementia_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Combination of one or more parents and one or more siblings</span>
+                  <input type="radio" value="Combination of one or more parents and one or more siblings"
+                    name="has_any_of_these_biological_relatives_been_diagnosed_with_alzheimer_s_or_other_forms_of_dementia_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">None of these
+                  </span>
+                  <input type="radio" value="None of these
+                    "
+                    name="has_any_of_these_biological_relatives_been_diagnosed_with_alzheimer_s_or_other_forms_of_dementia_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+
+            </li>
+          </ol>
+        </div>
+
+
+
+        <div class="form-item" data-title="OTHER">
+          <ol class="custom-list-number no-circle">
+            <li class="pb-5 element-37">
+              <label class="title-5 mb-3" for="">Do you have a handicap placard/license plate for your personal
+                use?</label>
+
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No"
+                    name="do_you_have_a_handicap_placard_license_plate_for_your_personal_use_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes"
+                    name="do_you_have_a_handicap_placard_license_plate_for_your_personal_use_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div  class="condicional-diplay" data-name="do_you_have_a_handicap_placard_license_plate_for_your_personal_use_" data-value="Yes">
+                <p class="text-4">If yes, please indicate reason </p>
+                <textarea class="form-control" name="if_yes__please_indicate_reason" id="" cols="30" rows="5"
+                  required></textarea>
+              </div>
+
+            </li>
+            <li class="pb-5 element-38">
+              <label class="title-5 mb-3" for="">Are you currently receiving disability benefits?</label>
+
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="are_you_currently_receiving_disability_benefits_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="are_you_currently_receiving_disability_benefits_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="are_you_currently_receiving_disability_benefits_" data-value="Yes">
+                <p class="text-4">Indicate whether it is VA (include percentage), social security, or other disability
+                  benefits, Indicate reason and approximate year you qualified for disability benefits.</p>
+                <textarea class="form-control"
+                  name="indicate_whether_it_is_va__include_percentage___social_security__or_other_disability_benefits__indi"
+                  id="" cols="30" rows="5" required></textarea>
+              </div>
+
+            </li>
+
+
+
+
+          </ol>
+        </div>
+
+        <div class="form-item" data-title="PRESCRIPTIONS/MEDICATIONS">
+          <ol class="custom-list-number no-circle">
+            <li class="pb-5 element-39">
+              <label class="title-5 mb-3" for="">Do you take any prescription medications?</label>
+
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="do_you_take_any_prescription_medications_" required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="do_you_take_any_prescription_medications_" required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+
+            </li>
+
+            <li class="pb-5 condicional-diplay element-40" data-name="do_you_take_any_prescription_medications_"
+              data-required="true" data-value="Yes">
+              <label class="title-5 mb-3" for="">List prescribed medication. Explain what they treat, dosage, how often
+                you take them, and approximate date that they were first prescribed (month/year is ideal, but if
+                unknown, approximate year is fine)</label>
+
+              <div class="row row__mach__height mb-3">
+                <div class="col-md-6">
+                  <p class="text-5 font-weight-bold">Medication 1 name and condition it treats</p>
+                  <input type="text" class="form-control" name="medication_1_name_and_condition_it_treats" required>
+                </div>
+                <div class="col-md-6 font-weight-regular">
+                  <p class="text-5-2">Medication 1 dosage and date originally prescribed</p>
+                  <input type="text" class="form-control" name="medication_1_dosage_and_date_originally_prescribed"
+                    required>
+                </div>
+              </div>
+
+              <div class="row row__mach__height mb-3 condicional-diplay no-empty"
+                data-name="medication_1_dosage_and_date_originally_prescribed" data-required="false"
+                data-value="no-empty">
+                <div class="col-md-6">
+                  <p class="text-5 font-weight-bold">Medication 2 name and condition it treats</p>
+                  <input type="text" class="form-control no-required no-count"
+                    name="medication_2_name_and_condition_it_treats">
+                </div>
+                <div class="col-md-6 font-weight-regular">
+                  <p class="text-5-2">Medication 2 dosage and date originally prescribed</p>
+                  <input type="text" class="form-control no-required no-count"
+                    name="medication_2_dosage_and_date_originally_prescribed">
+                </div>
+              </div>
+
+              <div class="row row__mach__height mb-3 condicional-diplay no-empty"
+                data-name="medication_2_name_and_condition_it_treats" data-required="false" data-value="no-empty">
+                <div class="col-md-6">
+                  <p class="text-5 font-weight-bold">Medication 3 name and condition it treats</p>
+                  <input type="text" class="form-control no-required no-count"
+                    name="medication_3_name_and_condition_it_treats">
+                </div>
+                <div class="col-md-6 font-weight-regular">
+                  <p class="text-5-2">Medication 3 dosage and date originally prescribed</p>
+                  <input type="text" class="form-control no-required no-count"
+                    name="medication_3_dosage_and_date_originally_prescribed">
+                </div>
+              </div>
+
+              <div class="row row__mach__height mb-3 condicional-diplay no-empty"
+                data-name="medication_3_name_and_condition_it_treats" data-required="false" data-value="no-empty">
+                <div class="col-md-6">
+                  <p class="text-5 font-weight-bold">Medication 4 name and condition it treats</p>
+                  <input type="text" class="form-control no-required no-count"
+                    name="medication_4_name_and_condition_it_treats">
+                </div>
+                <div class="col-md-6 font-weight-regular">
+                  <p class="text-5-2">Medication 4 dosage and date originally prescribed</p>
+                  <input type="text" class="form-control no-required no-count"
+                    name="medication_4_dosage_and_date_originally_prescribed">
+                </div>
+              </div>
+
+              <div class="row row__mach__height mb-3 condicional-diplay no-empty"
+                data-name="medication_4_name_and_condition_it_treats" data-required="false" data-value="no-empty">
+                <div class="col-md-6">
+                  <p class="text-5 font-weight-bold">Medication 5 name and condition it treats</p>
+                  <input type="text" class="form-control no-required no-count"
+                    name="medication_5_name_and_condition_it_treats">
+                </div>
+                <div class="col-md-6 font-weight-regular">
+                  <p class="text-5-2">Medication 5 dosage and date originally prescribed</p>
+                  <input type="text" class="form-control no-required no-count"
+                    name="medication_5_dosage_and_date_originally_prescribed">
+                </div>
+              </div>
+
+              <div class="row row__mach__height mb-3 condicional-diplay no-empty"
+                data-name="medication_5_name_and_condition_it_treats" data-required="false" data-value="no-empty">
+                <div class="col-md-6">
+                  <p class="text-5 font-weight-bold">Medication 6 name and condition it treats</p>
+                  <input type="text" class="form-control no-required no-count"
+                    name="medication_6_name_and_condition_it_treats">
+                </div>
+                <div class="col-md-6 font-weight-regular">
+                  <p class="text-5-2">Medication 6 dosage and date originally prescribed</p>
+                  <input type="text" class="form-control no-required no-count"
+                    name="medication_6_dosage_and_date_originally_prescribed">
+                </div>
+              </div>
+
+              <div class="row row__mach__height mb-3 condicional-diplay no-empty"
+                data-name="medication_6_name_and_condition_it_treats" data-required="false" data-value="no-empty">
+                <div class="col-md-6">
+                  <p class="text-5 font-weight-bold">Medication 7 name and condition it treats</p>
+                  <input type="text" class="form-control no-required no-count"
+                    name="medication_7_name_and_condition_it_treats">
+                </div>
+                <div class="col-md-6 font-weight-regular">
+                  <p class="text-5-2">Medication 7 dosage and date originally prescribed</p>
+                  <input type="text" class="form-control no-required no-count"
+                    name="medication_7_dosage_and_date_originally_prescribed">
+                </div>
+              </div>
+
+
+            </li>
+            <li class="pb-5 element-41">
+              <label class="title-5 mb-3" for="">Are there medications prescribed in the last two years that you no
+                longer take? (exclude medications for cold/flu)
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No"
+                    name="are_there_medications_prescribed_in_the_last_two_years_that_you_no_longer_take___exclude_medication"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes"
+                    name="are_there_medications_prescribed_in_the_last_two_years_that_you_no_longer_take___exclude_medication"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="are_there_medications_prescribed_in_the_last_two_years_that_you_no_longer_take___exclude_medication" data-value="Yes">
+                <p class="text-4">Provide name of medication, what prescribed, and when you last took it
+                </p>
+                <textarea class="form-control"
+                  name="provide_name_of_medication__what_prescribed__and_when_you_last_took_it" id="" cols="30" rows="5"
+                  required></textarea>
+              </div>
+
+            </li>
+            <li class="pb-5 element-42">
+              <label class="title-5 mb-3" for="">Do you use marijuana, whether prescribed or for recreation?
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No" name="do_you_use_marijuana__whether_prescribed_or_for_recreation_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes" name="do_you_use_marijuana__whether_prescribed_or_for_recreation_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="do_you_use_marijuana__whether_prescribed_or_for_recreation_" data-value="Yes">
+                <p class="text-4">Indicate frequency of use. If prescribed, also include condition being treated.</p>
+                <textarea class="form-control"
+                  name="indicate_frequency_of_use__if_prescribed__also_include_condition_being_treated_" id="" cols="30"
+                  rows="5" required></textarea>
+              </div>
+
+            </li>
+          </ol>
+        </div>
+
+        <div class="form-item" data-title="ONE LAST THING">
+          <ol class="custom-list-number no-circle">
+
+
+            <li class="pb-5 element-43">
+              <label class="title-5 mb-3" for="">Do you have any other medical conditions that we have not mentioned, or
+                is there anything else you’d like us to know?
+              </label>
+              <div>
+                <span class="custom-radio">
+                  <span class="radio-text">No</span>
+                  <input type="radio" value="No"
+                    name="do_you_have_any_other_medical_conditions_that_we_have_not_mentioned__or_is_there_anything_else_you_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+                <span class="custom-radio">
+                  <span class="radio-text">Yes </span>
+                  <input type="radio" value="Yes"
+                    name="do_you_have_any_other_medical_conditions_that_we_have_not_mentioned__or_is_there_anything_else_you_"
+                    required>
+                  <span class="checkmark"></span>
+                </span>
+              </div>
+              <div class="condicional-diplay" data-name="do_you_have_any_other_medical_conditions_that_we_have_not_mentioned__or_is_there_anything_else_you_" data-value="Yes">
+                <p class="text-4">Provide information such as names, dates, and types of diagnoses and treatments.
+                </p>
+                <textarea class="form-control"
+                  name="provide_information_such_as_names__dates__and_types_of_diagnoses_and_treatments_" id="" cols="30"
+                  rows="5" required></textarea>
+              </div>
+
+            </li>
+
+
+
+          </ol>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <div class="form-footer">
+    <div class="container">
+      <div class="form-footer-container d-flex">
+        <div class="form-footer-btn-prev">
+          <button id="prevBtn" class="btn btn-3 btn-green-2"><span class="btn-arrow"><</span><span class="btn-text">Previous</span></button>
+        </div>
+        <div class="form-footer-progress">
+          <div class="progress mb-1">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="25"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="text-center pt-1">
+            <span class="text-5"> <b id="step-title">About You</b> - <span id="step-answered">0</span> of <span
+                id="step-questions">9</span> answered</span>
+          </div>
+
+
+        </div>
+        <div class="form-footer-btn-next">
+          <button id="nextBtn" class="btn btn-3 btn-primary"> <span class="btn-text">Next Section</span>  <span class="btn-arrow">></span>  </button>
+          <button id="submitBtn" class="btn btn-3 btn-primary d-none">Submit</button>
         </div>
       </div>
-    </footer>
+    </div>
+  </div>
+  <div class="d-none">
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<!-- <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<script>
+  console.log(hbspt.forms);
+  hbspt.forms.create({
+	portalId: "405630",
+	formId: "7dc10c47-a690-4e1d-a93f-587ab169355f"
+});
+</script> -->
+  </div>
 
 
 
-    <!-- Optional JavaScript; choose one of the two! -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-5">
+          <div class="footer-logo">
+            <a href="#"><img src="./images/footer-logo.png" alt=""></a>
+          </div>
+          <ul class="footer-social">
+            <li><a href="#"><img src="./images/footer-facebook.svg" alt="facebook"></a></li>
+            <li><a href="#"><img src="./images/footer-twitter.svg" alt="facebook"></a></li>
+            <li><a href="#"><img src="./images/footer-in.svg" alt="facebook"></a></li>
+          </ul>
+          <div class="text-5 font-weight-400 mb-4">
+            © LTCI - 2020
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-7">
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <h4 class="text-small text-green text-uppercase font-weight-bold">Contact us</h4>
+              <p class="text-6">
+                <a href="tel:855-632-4582">(855) 632-4582</a>
+              </p>
+              <p class="text-6">
+                <a href="mailto:nea@ltcipartners.com">nea@ltcipartners.com</a>
+              </p>
+              <p class="text-6">
+                Monday - Friday <br> 8:00am - 5:00pm CT
+              </p>
+              <p class="text-6">
+                100 N Field Drive Suite 310, Lake Forest, IL 60045
+              </p>
+            </div>
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./js/app.js"></script>
-  </body>
+            <div class="col-sm-6 col-md-3">
+              <h4 class="text-small text-green text-uppercase font-weight-bold">Site Blocks</h4>
+              <p class="text-6">
+                <a href="#">Discover</a>
+              </p>
+              <p class="text-6">
+                <a href="#">What is Long Term Care?</a>
+              </p>
+              <p class="text-6">
+                <a href="#">Why Insurance?</a>
+              </p>
+              <p class="text-6">
+                <a href="#">How does the Insurance Work?</a>
+              </p>
+              <p class="text-6">
+                <a href="#">About us</a>
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+              <h4 class="text-small text-green text-uppercase font-weight-bold">Learn & Explore</h4>
+              <p class="text-6">
+                <a href="#">Educational Videos</a>
+              </p>
+              <p class="text-6">
+                <a href="#">Care Cost Calculator</a>
+              </p>
+              <p class="text-6">
+                <a href="#">Sample Rates</a>
+              </p>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <h4 class="text-small text-green text-uppercase font-weight-bold">Consultation</h4>
+              <p class="text-6">
+                <a href="#">Request a consultation</a>
+              </p>
+              <p class="text-6">
+                <a href="#">Open Health Questionnaire</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <hr class="mb-5 mt-4">
+      <div class="text footer-text">
+        <p>LTCI Partner’s was selected by the National Education Association Member Benefits Corporation to help NEA
+          members with his important planning. LTCI Partner’s is the only NEA endorsed provider for long term care
+          insurance. </p>
+        <p>LTCI Partner’s, LLC, (LTCI Partners) acts as an agent for select insurance companies to provide long-term
+          care insurance under this program. Invitations for application for LTC Insurance are made through LTCI
+          Partners. LTCI Partners or its licensed representatives are currently licensed in all 50 states and the
+          District of Columbia. License numbers are available upon request. LTCI Partners receives commissions from
+          insurance carriers, which include compensation based on total quantity and quality of insurance coverage.</p>
+        <p>The long-term care insurance policy describes coverages under the policy, exclusions and limitations, what
+          you must do to keep your policy in force, and what would cause your policy to be discontinued. Please contact
+          your licensed agent for more information, costs, and complete details on coverage. Availability of policies,
+          features, and benefits may vary by state.</p>
+        <p>An insurance agent may contact you. Premiums vary by issue age and health and for some plans may be increased
+          in the future. Long-term care insurance is underwritten by the insurance company we help you select. The
+          policy is subject to underwriting and a medical exam may be required to determine eligibility.</p>
+        <p>2020 LTCI Partners, LLC</p>
+
+
+
+
+
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
 </html>

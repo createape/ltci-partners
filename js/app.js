@@ -140,9 +140,13 @@ function headerColor() {
 function formMultiSteps() {
 
   var steps = [];
+  var stepsTotal ={};
   var currentStep = {};
+  var allInputs = [];
   function getSteps() {
     steps = [];
+    stepsTotal ={answered:0,count:0,porcent:0,questions:[]};
+    allInputs = [];
   var stepscontainer = $("#formMultiStep .form-item").each(function (index) {
       var step={};
       step.form = this;
@@ -153,13 +157,14 @@ function formMultiSteps() {
       step.requiredInput = 0;
       step.validAnswered = 0;
       step.index = index;
-
+      step.inputs=[];
       var radio = [];
       var radioAswer = [];
       var radioValid = [];
       var radioRequired = [];
       //Counting the inputs
       step.questions.each(function () {
+
         if(!$(this).hasClass("no-count")){
           if(this.type =="radio" || this.type =="checkbox"){
             var radio_item=0;
@@ -177,12 +182,25 @@ function formMultiSteps() {
             step.count ++;
           }
 
+          if(this.type =="radio" || this.type =="checkbox"){
+            if($(this).prop('checked')){
+              stepsTotal.questions.push({name:this.name,value:this.value});
+            }else{
+              if(stepsTotal.questions[this.name]=="" || stepsTotal.questions[this.name]==undefined){
+                stepsTotal.questions.push({name:this.name,value:""});
+              }
+
+            }
+          }
+          else{
+            stepsTotal.questions.push({name:this.name,value:this.value});
+          }
+
           //Counting the inputs with answer
           if(this.checkValidity() && this.value.length > 0){
             var radio_item=0;
             if(this.type =="radio" || this.type =="checkbox"){
               for (var index2 = 0; index2 < radioAswer.length; index2++) {
-                console.log(radioValid[index3] + "-" + this.name);
                 if(radioAswer[index2] == this.name){
                   radio_item++;
                 }
@@ -203,6 +221,10 @@ function formMultiSteps() {
               $(this).removeClass("is-invalid");
               $(this).addClass("is-valid");
             }
+
+            // var input = [];
+            // input[this.name] = this.value;
+            step.inputs[this.name] = this.value;
             var radio_item=0;
             if(this.type =="radio" || this.type =="checkbox"){
               for (var index3 = 0; index3 < radioValid.length; index3++) {
@@ -247,8 +269,12 @@ function formMultiSteps() {
       });
 
       step.porcent = (step.answered / step.count  ) * 100;
+      stepsTotal.answered += step.answered;
+      stepsTotal.count += step.count;
+      stepsTotal.porcent = (stepsTotal.answered / stepsTotal.count  ) * 100;
 
       steps.push(step);
+
     });
     if(currentStep.index == undefined){
       currentStep = steps[0];
@@ -259,17 +285,34 @@ function formMultiSteps() {
     printCurrentContent();
   }
 
-  getSteps();
   condicionalDisplay();
+  getSteps();
   showCurrentForm();
   showDisableHiddenBnt();
 
   function condicionalDisplay() {
+    function setRequired(item,value) {
+      $(item).find("input,textarea,select").each(function() {
+        if(!$(this).hasClass("no-required")){
+          $(this).prop('required', value);
+        }
 
+      });
+    }
+    function setNoCounting(item,value) {
+      $(item).find("input,textarea,select").each(function() {
+        if(value){
+          $(this).addClass('no-count');
+        }else{
+          $(this).removeClass('no-count');
+        }
+      });
+
+    }
     $(".condicional-diplay").each(function() {
       var data = $(this).data();
       var item = $("[name="+data.name+"]");
-      if(item.length > 0){
+      if(item.length > 1){
         var val= null;
         item.each(function () {
           if($(this).prop('checked')){
@@ -278,14 +321,50 @@ function formMultiSteps() {
         });
         if($(val).val() == $(this).data("value")){
           $(this).removeClass("d-none");
+          if(data.required){
+            setRequired(this,true);
+          }
+          setNoCounting(this,false);
+          var insideCOndicionaldisplay = $(this).find(".condicional-diplay");
+          if(insideCOndicionaldisplay.length > 0){
+            $(this).find(".condicional-diplay").each(function(params) {
+              setRequired(this,false);
+              setNoCounting(this,true);
+            });
+          }
         }else{
           $(this).addClass("d-none");
+          if(data.required){
+            setRequired(this,false);
+          }
+          setNoCounting(this,true);
         }
       }else{
         if(item.val() == $(this).data("value")){
           $(this).removeClass("d-none");
+          if(data.required){
+            setRequired(this,true);
+            setNoCounting(this,false);
+            var insideCOndicionaldisplay = $(this).find(".condicional-diplay");
+            if(insideCOndicionaldisplay.length > 0){
+              $(this).find(".condicional-diplay").each(function(params) {
+                setRequired(this,false);
+                setNoCounting(this,true);
+              });
+            }
+          }
+        }else if($(this).hasClass("no-empty")){
+          if(item.val().length > 0){
+            $(this).removeClass("d-none");
+          }else{
+            $(this).addClass("d-none");
+          }
         }else{
           $(this).addClass("d-none");
+          if(data.required){
+            setRequired(this,false);
+          }
+          setNoCounting(this,true);
         }
 
       }
@@ -310,10 +389,7 @@ function formMultiSteps() {
 
   }
 
-  function scrollToTop() {
-    var body = $("html, body");
-    body.stop().animate({scrollTop:$(currentStep.form).offset().top - 200}, 500, 'swing');
-  }
+
   function showCurrentForm(){
     $(steps).each(function() {
       $(this.form).removeClass("active");
@@ -324,15 +400,16 @@ function formMultiSteps() {
     $(currentStep.form).addClass("active");
   }
   function printCurrentContent() {
-    $(".form-footer-progress .progress-bar").css({width:currentStep.porcent+"%"});
+
+    $(".form-footer-progress .progress-bar").css({width:stepsTotal.porcent+"%"});
     $("#step-title").html(currentStep.title);
     $("#step-answered").html(currentStep.answered);
     $("#step-questions").html(currentStep.count);
   }
 
   $("#formMultiStep .form-item input,#formMultiStep .form-item select,#formMultiStep .form-item textarea" ).on("input change click",function () {
-    getSteps();
     condicionalDisplay();
+    getSteps();
   });
   $("#prevBtn" ).on("click",function () {
     if(currentStep.index > 0){
@@ -343,6 +420,33 @@ function formMultiSteps() {
       scrollToTop();
     }
   });
+
+  $("#submitBtn" ).on("click",function () {
+
+    if(currentStep.isValid){
+      callAjax({
+        portalId:"405630",
+        formGUID:"7dc10c47-a690-4e1d-a93f-587ab169355f",
+        data:stepsTotal.questions
+      });
+    }else{
+      currentStep.questions.each(function (params) {
+        $(this).removeClass("is-invalid");
+        $(this).removeClass("is-valid");
+      });
+      currentStep.questions.each(function (params) {
+        $(this).removeClass("is-invalid");
+        if(this.checkValidity()){
+          $(this).addClass("is-valid")
+        }else{
+          $(this).addClass("is-invalid")
+        }
+
+      });
+    }
+  });
+
+
   $("#nextBtn" ).on("click",function () {
 
     if(currentStep.isValid){
@@ -370,79 +474,103 @@ function formMultiSteps() {
     }
 
   });
-
-
-
-}
-
-function callAjax(payload){
-  //- formSelector
-  //- portalId
-  //- formGUID
-  //- hideMessageTime
-  //- callback
-  //
-  var $form = $(payload.formSelector);
-  var form = $form[0];
-  var url = "https://api.hsforms.com/submissions/v3/integration/submit/" + payload.portalId + "/" + payload.formGUID
-  //
-  showLoader();
-  //
-  $.ajax({
-      type: 'POST',
-      url: $form.attr('action') || url, // use the form's action attribute as the endpoint
-      data: JSON.stringify({
-          fields: data  // use the data from the form
-      }),
-      dataType: "json",
-      headers: {
-          'Accept': 'application/json', // this makes the server send you a JSON response
-          'Content-Type': 'application/json'
-      },
-      success: function (response) // handle the successful submission of your POST
-      {
-          console.log(response) // response contains the form submission that was just made
-          // alert("Thank you for your submission, we'll get back to you soon :)");
-          form.reset() // reset the form
-          hideLoader();
-          showSuccessMessage();
-      },
-      error: function (response) {
-          hideLoader();
-          showErrorMessage();
-      },
-      complete: function (response) {
-          form.reset();
-          hideLoader();
-
-          if(payload.callback){
-              payload.callback();
-          }
-
-          setTimeout(function () {
-              hideMessage();
-          }, payload.hideMessageTime || 5000)
-      }
+  $("#reset-the-form" ).on("click",function () {
+    location.reload();
   });
 
 
-  function showLoader(){
-
+  function scrollToTop() {
+    var body = $("html, body");
+    body.stop().animate({scrollTop:$(currentStep.form).offset().top - 200}, 500, 'swing');
   }
 
-  function hideLoader(){
+  // <!--[if lte IE 8]>
+  // <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  // <![endif]-->
+  // <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  // <script>
+  //   hbspt.forms.create({
+  // 	portalId: "405630",
+  // 	formId: "7dc10c47-a690-4e1d-a93f-587ab169355f"
+  // });
+  // </script>
 
-  }
+  function callAjax(payload){
+    //- formSelector
+    //- portalId
+    //- formGUID
+    //- hideMessageTime
+    //- callback
+    //
+    var $form = $(payload.formSelector);
+    var form = $form[0];
+    var url = "https://api.hsforms.com/submissions/v3/integration/submit/" + payload.portalId + "/" + payload.formGUID
+    //
+    showLoader();
 
-  function showSuccessMessage(){
+    $.ajax({
+        type: 'POST',
+        url: url, // use the form's action attribute as the endpoint
+        data: JSON.stringify({
+          // "submittedAt": "1517927174000",
+          "fields": payload.data,
+          "context": {
+            // "hutk": document.cookie.hubspotutk, // include this parameter and set it to the hubspotutk cookie value to enable cookie tracking on your submission
+            "pageUri": window.location.hostname + window.location.pathname,
+            "pageName": $("#pageName").val()
+          },
+          "legalConsentOptions":{ // Include this object when GDPR options are enabled
+            "consent":{
+              "consentToProcess":true,
+              "text":"I agree to allow Example Company to store and process my personal data.",
+              "communications":[
+                {
+                  "value":true,
+                  "subscriptionTypeId":999,
+                  "text":"I agree to receive marketing communications from Example Company."
+                }
+              ]
+            }
+          }
+        }),
+        dataType: "json",
+        headers: {
+            'Accept': 'application/json', // this makes the server send you a JSON response
+            'Content-Type': 'application/json'
+        },
+        success: function (response) // handle the successful submission of your POST
+        {
 
-  }
+            $("#hero-2-green").addClass("d-none");
+            $("#main-form-container").addClass("d-none");
+            $(".form-footer").addClass("d-none");
 
-  function showErrorMessage(){
+            $("#thankyoupage").removeClass("d-none");
+            var name = "another person";
+            for (let index = 0; index < payload.data.length; index++) {
+              if(payload.data[index].name == "enter_their_first_and_the_last_name" && payload.data[index].value.length >0){
+                name = payload.data[index].value;
+              }
+            }
+            $("#next-form-name").html(name);
+            scrollToTop();
+            hideLoader();
 
-  }
 
-  function hideMessage(){
+        },
+        error: function (response) {
+          hideLoader();
+          alert("We get a error, try it again later.");
+        }
+    });
 
+
+    function showLoader(){
+      $(".loading").addClass("show");
+    }
+
+    function hideLoader(){
+      $(".loading").removeClass("show");
+    }
   }
 }

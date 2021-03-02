@@ -125,6 +125,23 @@
   @media (max-width:767px) {
     font-size: 20px;
   }
+  .line-spacing{
+    font-weight: 700;
+    position: relative;
+      &::before,&::after{
+        content: "";
+        display: inline-block;
+        width: 43px;
+        height: 1px;
+        position: relative;
+        background-color: #CFD3DD;
+        margin: 10px 10px;
+        @media (max-width:1200px) {
+          margin: 6px 10px;
+          width: 26px;
+        }
+      }
+  }
 }
 .text-2{
   font-size: 24px;
@@ -133,6 +150,15 @@
   line-height: 180%;
   @media (max-width:1200px) {
     font-size: 20px;
+  }
+  p{
+    font-size: 24px;
+    font-family: $font;
+    color: $black;
+    line-height: 180%;
+    @media (max-width:1200px) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -174,6 +200,12 @@
   font-family: $font;
   color: $black;
   font-weight: 600;
+}
+.text-5-2{
+  font-size: 16px;
+  font-family: $font;
+  color: $black;
+  font-weight: 400;
 }
 
 .text-6{
@@ -236,9 +268,14 @@
 .btn{
   font-family: $font;
   font-weight: 600;
+  transition: background-color .5 ease-in-out;
+
   &.btn-primary{
     background-color: $green ;
     border-color: $green;
+    &:hover{
+      background-color: #2d995eab	;
+    }
   }
   &.btn-1{
     font-size: 20px;
@@ -280,16 +317,25 @@
     background-color: $white;
     border-color: #A5A5A5;
     color: $black;
+    &:hover{
+      background-color: #ffffff94;
+    }
   }
   &.btn-green{
     background-color: $white;
     border-color: #2D995E;
     color: #2D995E;
+    &:hover{
+      background-color: #ffffff8c	;
+    }
   }
   &.btn-green-2{
     background-color: #F9F9F9;
     border-color: #C4D6CD;
     color: #2D995E;
+    &:hover{
+      background-color: #f9f9f9af	;
+    }
   }
   &.btn-green-transparent{
     background-color: transparent;
@@ -346,6 +392,10 @@
   max-width: 720px;
 }
 
+.max-width-550{
+  max-width: 580px !important;
+}
+
 .min-width-300{
   @media(min-width:767px){
     min-width: 300px;
@@ -385,6 +435,9 @@
 .text-light-green{
   color: $light-green;
 }
+.text-red{
+  color: $red;
+}
 
 // Background Colors
 
@@ -414,7 +467,7 @@
 }
 
 .bottom__green__shape{
-  background-image:url(../images/bottom___shape___green.png);
+  background-image:url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/bottom___shape___green.png);
   background-position: center bottom;
   background-size:100% auto;
   background-repeat: no-repeat;
@@ -432,7 +485,7 @@
     transform: translate(-50%,-50%);
     width: 86px;
     height: 86px;
-    background-image: url(../images/play-button-show.svg);
+    background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/play-button-show.svg);
     background-repeat: no-repeat;
     background-size: 100%;
   }
@@ -443,7 +496,7 @@
   padding:0;
   counter-reset: my-awesome-counter;
 
-    li{
+    & > li{
       counter-increment: my-awesome-counter;
       margin-bottom: 20px;
       line-height: 130%;
@@ -484,7 +537,7 @@
     }
   }
   &.no-circle{
-    li{
+    & > li{
       padding-left: 60px;
       &:before {
       height: auto;
@@ -729,6 +782,8 @@
     border: 7px solid #2D995E;
   }
 }
+
+
 
 
 

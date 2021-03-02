@@ -175,6 +175,28 @@
   }
 }
 
+.text .line-spacing, .testimonials .testimonials__images__item__text span .line-spacing {
+  font-weight: 700;
+  position: relative;
+}
+
+.text .line-spacing::before, .testimonials .testimonials__images__item__text span .line-spacing::before, .text .line-spacing::after, .testimonials .testimonials__images__item__text span .line-spacing::after {
+  content: "";
+  display: inline-block;
+  width: 43px;
+  height: 1px;
+  position: relative;
+  background-color: #CFD3DD;
+  margin: 10px 10px;
+}
+
+@media (max-width: 1200px) {
+  .text .line-spacing::before, .testimonials .testimonials__images__item__text span .line-spacing::before, .text .line-spacing::after, .testimonials .testimonials__images__item__text span .line-spacing::after {
+    margin: 6px 10px;
+    width: 26px;
+  }
+}
+
 .text-2 {
   font-size: 24px;
   font-family: "Inter", sans-serif;
@@ -184,6 +206,19 @@
 
 @media (max-width: 1200px) {
   .text-2 {
+    font-size: 20px;
+  }
+}
+
+.text-2 p {
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+  color: #0D193F;
+  line-height: 180%;
+}
+
+@media (max-width: 1200px) {
+  .text-2 p {
     font-size: 20px;
   }
 }
@@ -236,6 +271,13 @@
   font-family: "Inter", sans-serif;
   color: #0D193F;
   font-weight: 600;
+}
+
+.text-5-2 {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  color: #0D193F;
+  font-weight: 400;
 }
 
 .text-6 {
@@ -311,11 +353,17 @@
 .btn {
   font-family: "Inter", sans-serif;
   font-weight: 600;
+  -webkit-transition: background-color .5 ease-in-out;
+  transition: background-color .5 ease-in-out;
 }
 
 .btn.btn-primary {
   background-color: #2D995E;
   border-color: #2D995E;
+}
+
+.btn.btn-primary:hover {
+  background-color: #2d995eab;
 }
 
 .btn.btn-1 {
@@ -369,16 +417,28 @@
   color: #0D193F;
 }
 
+.btn.btn-white:hover {
+  background-color: #ffffff94;
+}
+
 .btn.btn-green {
   background-color: #ffffff;
   border-color: #2D995E;
   color: #2D995E;
 }
 
+.btn.btn-green:hover {
+  background-color: #ffffff8c;
+}
+
 .btn.btn-green-2 {
   background-color: #F9F9F9;
   border-color: #C4D6CD;
   color: #2D995E;
+}
+
+.btn.btn-green-2:hover {
+  background-color: #f9f9f9af;
 }
 
 .btn.btn-green-transparent {
@@ -443,6 +503,10 @@
   max-width: 720px;
 }
 
+.max-width-550 {
+  max-width: 580px !important;
+}
+
 @media (min-width: 767px) {
   .min-width-300 {
     min-width: 300px;
@@ -488,6 +552,10 @@
   color: #E8FFF4;
 }
 
+.text-red {
+  color: #bb2020;
+}
+
 .bg-gray {
   background-color: #F9F9F9;
 }
@@ -521,7 +589,7 @@
 }
 
 .bottom__green__shape {
-  background-image: url(../images/bottom___shape___green.png);
+  background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/bottom___shape___green.png);
   background-position: center bottom;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -542,7 +610,7 @@
           transform: translate(-50%, -50%);
   width: 86px;
   height: 86px;
-  background-image: url(../images/play-button-show.svg);
+  background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/play-button-show.svg);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -553,7 +621,7 @@
   counter-reset: my-awesome-counter;
 }
 
-.custom-list-number li {
+.custom-list-number > li {
   counter-increment: my-awesome-counter;
   margin-bottom: 20px;
   line-height: 130%;
@@ -564,17 +632,17 @@
 }
 
 @media (max-width: 991px) {
-  .custom-list-number li {
+  .custom-list-number > li {
     font-size: 20px;
     padding-left: 51px;
   }
 }
 
-.custom-list-number li span {
+.custom-list-number > li span {
   font-weight: 600;
 }
 
-.custom-list-number li:before {
+.custom-list-number > li:before {
   content: counter(my-awesome-counter);
   display: inline-block;
   width: 56px;
@@ -594,7 +662,7 @@
 }
 
 @media (max-width: 991px) {
-  .custom-list-number li:before {
+  .custom-list-number > li:before {
     width: 36px;
     height: 36px;
     line-height: 36px;
@@ -602,11 +670,11 @@
   }
 }
 
-.custom-list-number.no-circle li {
+.custom-list-number.no-circle > li {
   padding-left: 60px;
 }
 
-.custom-list-number.no-circle li:before {
+.custom-list-number.no-circle > li:before {
   height: auto;
   line-height: 100%;
   top: 0;
@@ -1184,7 +1252,7 @@ body {
   z-index: -1;
   -webkit-transform: rotate(-3deg);
           transform: rotate(-3deg);
-  background-image: url(../images/hero-2-background.png);
+  background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/hero-2-background.png);
   background-position: left center;
   background-size: 53%;
   background-repeat: no-repeat;
@@ -1299,12 +1367,12 @@ body {
 
 .logo-slider .slick-arrow.slick-prev {
   left: calc(-1.25rem - 26px);
-  background-image: url(../images/logo___slider___arrow-left-min.png);
+  background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/logo___slider___arrow-left-min.png);
 }
 
 .logo-slider .slick-arrow.slick-next {
   right: calc(-1.25rem - 26px);
-  background-image: url(../images/logo___slider___arrow-right-min.png);
+  background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/logo___slider___arrow-right-min.png);
 }
 
 @media (max-width: 991px) {
@@ -1400,7 +1468,7 @@ body {
   display: block;
   height: 1228px;
   width: 769px;
-  background-image: url(../images/green____shape__right-min.png);
+  background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/green____shape__right-min.png);
   background-size: 100%;
   position: absolute;
   top: -70%;
@@ -1587,7 +1655,7 @@ body {
   display: block;
   height: 1228px;
   width: 769px;
-  background-image: url(../images/green____shape__left-min.png);
+  background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/green____shape__left-min.png);
   background-size: 100%;
   position: absolute;
   top: 80px;
@@ -1653,7 +1721,7 @@ body {
   display: block;
   height: 1228px;
   width: 769px;
-  background-image: url(../images/green____shape__right-min__2.png);
+  background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/green____shape__right-min__2.png);
   background-size: 100%;
   position: absolute;
   top: 300px;
@@ -1711,12 +1779,39 @@ body {
 .insurance-made-simple .insurance-made-simple__item .insurance-made-simple__item--inner {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 130% auto;
   display: block;
   position: relative;
   border-radius: 8px;
   padding: 50px;
   min-height: 530px;
+  overflow: hidden;
+}
+
+.insurance-made-simple .insurance-made-simple__item .insurance-made-simple__item--inner .insurance-made-simple__item--inner__bg {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  z-index: -1;
+}
+
+.insurance-made-simple .insurance-made-simple__item .insurance-made-simple__item--inner:hover .insurance-made-simple__item--inner__bg {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .insurance-made-simple .insurance-made-simple__item .insurance-made-simple__item--inner::before {
@@ -1848,7 +1943,7 @@ body {
 
 .about_us .about_us_team .slick-arrow.slick-prev {
   left: calc(1460px - 130px);
-  background-image: url(../images/logo___slider___arrow-left-min.png);
+  background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/logo___slider___arrow-left-min.png);
 }
 
 @media (max-width: 1490px) {
@@ -1859,7 +1954,7 @@ body {
 
 .about_us .about_us_team .slick-arrow.slick-next {
   left: calc(1460px - 65px);
-  background-image: url(../images/logo___slider___arrow-right-min.png);
+  background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/logo___slider___arrow-right-min.png);
 }
 
 @media (max-width: 1490px) {
@@ -2008,12 +2103,12 @@ body {
 
 .testimonials .slick-arrow.slick-prev {
   left: 0px;
-  background-image: url(../images/logo___slider___arrow-left-min.png);
+  background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/logo___slider___arrow-left-min.png);
 }
 
 .testimonials .slick-arrow.slick-next {
   left: 60px;
-  background-image: url(../images/logo___slider___arrow-right-min.png);
+  background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/logo___slider___arrow-right-min.png);
 }
 
 .testimonials__text-container:before {
@@ -2027,7 +2122,7 @@ body {
   height: 99px;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-image: url(../images/Quote-Smyobl.png);
+  background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/Quote-Smyobl.png);
 }
 
 @media (max-width: 991px) {
@@ -2066,7 +2161,7 @@ body {
   content: "";
   display: block;
   background-color: #082C1A;
-  background-image: url(../images/get_start_circle.png);
+  background-image: url(https://f.hubspotusercontent30.net/hubfs/405630/LTCI%20Partners/get_start_circle.png);
   background-position: 40%;
   background-repeat: no-repeat;
   width: 150%;
@@ -2239,9 +2334,35 @@ body {
   z-index: 999;
 }
 
+@media (max-width: 900px) {
+  .form-footer .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .form-footer .container .text-5 {
+    font-size: 14px;
+    line-height: 100%;
+  }
+}
+
 .form-footer .form-footer-btn-prev .btn,
 .form-footer .form-footer-btn-next .btn {
   min-width: 212px;
+}
+
+@media (max-width: 992px) {
+  .form-footer .form-footer-btn-prev .btn,
+  .form-footer .form-footer-btn-next .btn {
+    min-width: 56px;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+}
+
+.form-footer .form-footer-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .form-footer .form-footer-progress {
@@ -2249,6 +2370,24 @@ body {
       -ms-flex: 1;
           flex: 1;
   padding: 10px 126px;
+}
+
+@media (max-width: 1200px) {
+  .form-footer .form-footer-progress {
+    padding: 10px 80px;
+  }
+}
+
+@media (max-width: 900px) {
+  .form-footer .form-footer-progress {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .form-footer .form-footer-progress {
+    padding: 10px 15px;
+  }
 }
 
 .form-footer .progress {
@@ -2260,6 +2399,25 @@ body {
 .form-footer .form-footer-container {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+@media (max-width: 900px) {
+  .form-footer .form-footer-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .form-footer .btn-text {
+    display: none;
+  }
+}
+
+@media (min-width: 993px) {
+  .form-footer .btn-arrow {
+    display: none;
+  }
 }
 
 .form-body {
@@ -2288,5 +2446,62 @@ body {
   opacity: 1;
   -webkit-transform: translateX(-140%);
           transform: translateX(-140%);
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffffd5;
+  z-index: -1;
+  left: -300%;
+}
+
+.loading img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 200px;
+  -webkit-animation: zoominout 1.5s infinite;
+          animation: zoominout 1.5s infinite;
+}
+
+.loading.show {
+  z-index: 99999;
+  left: 0;
+}
+
+@-webkit-keyframes zoominout {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(1.2);
+            transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes zoominout {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(1.2);
+            transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
 }
 /*# sourceMappingURL=style.css.map */
