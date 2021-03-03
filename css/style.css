@@ -1741,6 +1741,29 @@ body {
   left: 0;
 }
 
+.insurance-made-simple__about_us.after-modified {
+  background-color: #F0F3F2;
+  padding-top: 160px;
+  margin-top: 160px;
+  padding-bottom: 160px;
+}
+
+.insurance-made-simple__about_us.after-modified::before {
+  background: none;
+}
+
+.insurance-made-simple__about_us.after-modified::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 0px;
+  background-color: #f4f4f4;
+  top: 0;
+  left: 0;
+}
+
 .insurance-made-simple {
   padding-top: 180px;
   padding-bottom: 30px;
@@ -1843,6 +1866,52 @@ body {
   bottom: 50px;
   text-transform: uppercase;
   color: #1CD771;
+}
+
+.why-we-do-it {
+  margin-top: 167px;
+}
+
+.why-we-do-it h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  /* identical to box height, or 160% */
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #2D995E;
+}
+
+.why-we-do-it h2 {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+@media (max-width: 1200px) {
+  .why-we-do-it h2 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .why-we-do-it h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .why-we-do-it h2 {
+    font-size: 34px;
+  }
+}
+
+.why-we-do-it p {
+  margin-top: 50px;
+}
+
+.why-we-do-it img {
+  margin-top: 128px;
 }
 
 .about_us {
@@ -2503,5 +2572,69 @@ body {
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
   }
+}
+
+.about-us .hero__item {
+  margin-top: 152px;
+  background-repeat: no-repeat;
+  background-position-x: 4vw;
+  padding-left: 4vw;
+}
+
+@media (max-width: 1250px) {
+  .about-us .hero__item {
+    background-size: cover;
+    background-position-x: 0;
+  }
+}
+
+@media (max-width: 1250px) {
+  .about-us .hero__item {
+    margin-top: 142px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-us .hero__item {
+    margin-top: 81px;
+  }
+}
+
+.about-us .hero__item .container {
+  padding-top: 151px;
+  padding-bottom: 157px;
+}
+
+.about-us .hero__item .container .max-width-790 {
+  margin-left: 0px;
+}
+
+.about-us .hero__item .container .max-width-790 .title-1 {
+  letter-spacing: -0.01em;
+  max-width: 716px;
+}
+
+.about-us .hero__item .container .max-width-790 h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  /* identical to box height, or 160% */
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #2D995E;
+}
+
+.about-us .hero__item--inner {
+  position: relative;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.about-us .hero__item--inner p.text {
+  max-width: 590px;
+  /* or 42px */
+  letter-spacing: -0.01em;
+  color: #0D193F;
+  opacity: 0.8;
 }
 /*# sourceMappingURL=style.css.map */
