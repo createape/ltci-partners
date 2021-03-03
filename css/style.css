@@ -2577,14 +2577,14 @@ body {
 .about-us .hero__item {
   margin-top: 152px;
   background-repeat: no-repeat;
-  background-position-x: 4vw;
-  padding-left: 4vw;
+  position: relative;
 }
 
 @media (max-width: 1250px) {
   .about-us .hero__item {
     background-size: cover;
     background-position-x: 0;
+    padding-left: 4vw;
   }
 }
 
@@ -2597,6 +2597,42 @@ body {
 @media (max-width: 767px) {
   .about-us .hero__item {
     margin-top: 81px;
+    background-position-x: 0;
+  }
+}
+
+.about-us .hero__item:after {
+  content: "";
+  position: absolute;
+  background-color: #0E3B26;
+  height: 50%;
+  display: block;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.about-us .hero__item button {
+  width: 124px;
+  height: 124px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: cover;
+  display: block;
+  border: 0;
+  padding: 0;
+  left: 6vw;
+  bottom: -58px;
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .about-us .hero__item button {
+    width: 80px;
+    height: 80px;
+    bottom: -40px;
   }
 }
 
