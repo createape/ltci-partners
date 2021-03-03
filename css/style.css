@@ -1914,6 +1914,12 @@ body {
   margin-top: 128px;
 }
 
+@media (max-width: 767px) {
+  .why-we-do-it img {
+    margin-top: 50px;
+  }
+}
+
 .about_us {
   padding-top: 30px;
   padding-bottom: 60px;
