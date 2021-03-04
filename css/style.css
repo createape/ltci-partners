@@ -2413,6 +2413,18 @@ body {
   font-weight: 900;
 }
 
+@media (max-width: 1200px) {
+  .sample-rates .hero .hero__item--inner .container .title-6 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sample-rates .hero .hero__item--inner .container .title-6 {
+    font-size: 14px;
+  }
+}
+
 .sample-rates .hero .hero__item--inner .container .title-1 {
   color: #fff;
   font-weight: 500;
@@ -2432,6 +2444,7 @@ body {
   .sample-rates .hero .hero__item--inner .container .title-1 {
     font-size: 34px;
     line-height: 38px;
+    margin-bottom: 2px !important;
   }
 }
 
@@ -2443,6 +2456,18 @@ body {
   /* or 38px */
   color: #ffffff;
   opacity: 0.8;
+}
+
+@media (max-width: 1200px) {
+  .sample-rates .hero .hero__item--inner .container .text, .sample-rates .hero .hero__item--inner .container .testimonials .testimonials__images__item__text span, .testimonials .testimonials__images__item__text .sample-rates .hero .hero__item--inner .container span {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sample-rates .hero .hero__item--inner .container .text, .sample-rates .hero .hero__item--inner .container .testimonials .testimonials__images__item__text span, .testimonials .testimonials__images__item__text .sample-rates .hero .hero__item--inner .container span {
+    font-size: 16px;
+  }
 }
 
 .sample-rates .rates-slider___learn-explore {
@@ -2479,7 +2504,7 @@ body {
 
 @media (max-width: 767px) {
   .sample-rates .rates-tabs {
-    margin-top: -60px;
+    margin-top: 0px;
   }
 }
 

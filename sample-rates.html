@@ -78,10 +78,7 @@
       </div>
     </div>
   </section>
-
-  <div class="rates-slider___learn-explore">
-
-    <section class="rates-tabs">
+   <section class="rates-tabs">
       <div class="container">
         <div class="card">
           <div class="card-body">
@@ -96,6 +93,9 @@
         </div>
       </div>
     </section>
+  <div class="rates-slider___learn-explore">
+
+ 
 
     <section class="tabs-container">
       <div class="container">
@@ -607,8 +607,8 @@
       // SGLF / SGLM / COUPLES
       $('.slideinfo h3').text(ageRange);
 
-            $('.sr-heroes').fadeOut('fast');
-      $('.sr-hero1').fadeIn();
+      $('.sr-heroes').fadeOut('fast');
+      $('.sr-hero1').fadeIn('fast');
 
   
       var planA,
@@ -853,24 +853,28 @@
       $('#tabs li').click(function () {
         $('#tabs li').removeClass('active');
         $(this).addClass('active');
+        $('.hero__item--inner').fadeOut('fast');
         $('.sr-heroes').fadeOut('fast');
         console.log('TYPE', $(this).data('type'))
         switch($(this).data('type')) {
             case "SGLF":    
-            $('.sr-hero1').fadeIn();
+            $('.sr-hero1').fadeIn('slow');
+    
               planType = "SGLF";
               break;
             case "SGLM":
-            $('.sr-hero2').fadeIn();
+            $('.sr-hero2').fadeIn('slow');
+   
               planType = "SGLM";
               break;
             case "COUPLES":
-            $('.sr-hero3').fadeIn();
+            $('.sr-hero3').fadeIn('slow');
+      
               planType = "COUPLES";
               break;
           }
           updatePlans();
-     
+          $('.hero__item--inner').fadeIn('slow');
       });
       
     });
