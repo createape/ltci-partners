@@ -1,0 +1,422 @@
+{
+	"permonth": 6000,
+	"lifetime": 277400,
+	"benefits": "3% Annual Growth",
+	"benefitsLife": 144000,
+	"ages": [
+		{
+			"age": 30,
+			"SGLF": 251,
+			"SGLM": 149,
+			"COUPLES": 320,
+			"SGLFLTC": 421,
+			"SGLMLTC": 384,
+			"COUPLESLTC": 760
+		},
+		{
+			"age": 31,
+			"SGLF": 256,
+			"SGLM": 149,
+			"COUPLES": 324,
+			"SGLFLTC": 419,
+			"SGLMLTC": 382,
+			"COUPLESLTC": 756
+		},
+		{
+			"age": 32,
+			"SGLF": 256,
+			"SGLM": 154,
+			"COUPLES": 327,
+			"SGLFLTC": 417,
+			"SGLMLTC": 380,
+			"COUPLESLTC": 752
+		},
+		{
+			"age": 33,
+			"SGLF": 261,
+			"SGLM": 154,
+			"COUPLES": 331,
+			"SGLFLTC": 415,
+			"SGLMLTC": 379,
+			"COUPLESLTC": 748
+		},
+		{
+			"age": 34,
+			"SGLF": 261,
+			"SGLM": 154,
+			"COUPLES": 331,
+			"SGLFLTC": 413,
+			"SGLMLTC": 377,
+			"COUPLESLTC": 744
+		},
+		{
+			"age": 35,
+			"SGLF": 265,
+			"SGLM": 158,
+			"COUPLES": 339,
+			"SGLFLTC": 411,
+			"SGLMLTC": 375,
+			"COUPLESLTC": 740
+		},
+		{
+			"age": 36,
+			"SGLF": 270,
+			"SGLM": 158,
+			"COUPLES": 342,
+			"SGLFLTC": 409,
+			"SGLMLTC": 374,
+			"COUPLESLTC": 737
+		},
+		{
+			"age": 37,
+			"SGLF": 270,
+			"SGLM": 158,
+			"COUPLES": 342,
+			"SGLFLTC": 408,
+			"SGLMLTC": 372,
+			"COUPLESLTC": 733
+		},
+		{
+			"age": 38,
+			"SGLF": 274,
+			"SGLM": 159,
+			"COUPLES": 346,
+			"SGLFLTC": 406,
+			"SGLMLTC": 371,
+			"COUPLESLTC": 730
+		},
+		{
+			"age": 39,
+			"SGLF": 279,
+			"SGLM": 163,
+			"COUPLES": 353,
+			"SGLFLTC": 404,
+			"SGLMLTC": 369,
+			"COUPLESLTC": 726
+		},
+		{
+			"age": 40,
+			"SGLF": 231,
+			"SGLM": 152,
+			"COUPLES": 231,
+			"SGLFLTC": 403,
+			"SGLMLTC": 368,
+			"COUPLESLTC": 723
+		},
+		{
+			"age": 41,
+			"SGLF": 235,
+			"SGLM": 154,
+			"COUPLES": 235,
+			"SGLFLTC": 422,
+			"SGLMLTC": 386,
+			"COUPLESLTC": 757
+		},
+		{
+			"age": 42,
+			"SGLF": 239,
+			"SGLM": 157,
+			"COUPLES": 239,
+			"SGLFLTC": 441,
+			"SGLMLTC": 404,
+			"COUPLESLTC": 391
+		},
+		{
+			"age": 43,
+			"SGLF": 243,
+			"SGLM": 160,
+			"COUPLES": 243,
+			"SGLFLTC": 461,
+			"SGLMLTC": 421,
+			"COUPLESLTC": 822
+		},
+		{
+			"age": 44,
+			"SGLF": 247,
+			"SGLM": 162,
+			"COUPLES": 247,
+			"SGLFLTC": 480,
+			"SGLMLTC": 439,
+			"COUPLESLTC": 854
+		},
+		{
+			"age": 45,
+			"SGLF": 253,
+			"SGLM": 165,
+			"COUPLES":253,
+			"SGLFLTC": 499,
+			"SGLMLTC": 457,
+			"COUPLESLTC": 884
+		},
+		{
+			"age": 46,
+			"SGLF": 257,
+			"SGLM": 168,
+			"COUPLES": 157,
+			"SGLFLTC": 521,
+			"SGLMLTC": 476,
+			"COUPLESLTC": 919
+		},
+		{
+			"age": 47,
+			"SGLF": 262,
+			"SGLM": 171,
+			"COUPLES": 262,
+			"SGLFLTC": 542,
+			"SGLMLTC": 494,
+			"COUPLESLTC": 951
+		},
+		{
+			"age": 48,
+			"SGLF": 266,
+			"SGLM": 174,
+			"COUPLES": 266,
+			"SGLFLTC": 563,
+			"SGLMLTC": 512,
+			"COUPLESLTC": 983
+		},
+		{
+			"age": 49,
+			"SGLF": 272,
+			"SGLM": 177,
+			"COUPLES":272,
+			"SGLFLTC": 584,
+			"SGLMLTC": 531,
+			"COUPLESLTC": 1004
+		},
+		{
+			"age": 50,
+			"SGLF": 276,
+			"SGLM": 180,
+			"COUPLES": 276,
+			"SGLFLTC": 606,
+			"SGLMLTC": 549,
+			"COUPLESLTC": 1048
+		},
+		{
+			"age": 51,
+			"SGLF": 283,
+			"SGLM": 185,
+			"COUPLES": 283,
+			"SGLFLTC": 637,
+			"SGLMLTC": 576,
+			"COUPLESLTC": 1096
+		},
+		{
+			"age": 52,
+			"SGLF": 290,
+			"SGLM": 189,
+			"COUPLES": 290,
+			"SGLFLTC": 668,
+			"SGLMLTC": 603,
+			"COUPLESLTC": 1143
+		},
+		{
+			"age": 53,
+			"SGLF": 294,
+			"SGLM": 194,
+			"COUPLES": 297,
+			"SGLFLTC": 700,
+			"SGLMLTC": 630,
+			"COUPLESLTC": 1192
+		},
+		{
+			"age": 54,
+			"SGLF": 305,
+			"SGLM": 199,
+			"COUPLES": 305,
+			"SGLFLTC": 731,
+			"SGLMLTC": 656,
+			"COUPLESLTC": 1240
+		},
+		{
+			"age": 55,
+			"SGLF": 392,
+			"SGLM": 255,
+			"COUPLES": 392,
+			"SGLFLTC": 762,
+			"SGLMLTC": 683,
+			"COUPLESLTC": 1289
+		},
+		{
+			"age": 56,
+			"SGLF": 401,
+			"SGLM": 262,
+			"COUPLES": 401,
+			"SGLFLTC": 806,
+			"SGLMLTC": 718,
+			"COUPLESLTC": 1356
+		},
+		{
+			"age": 57,
+			"SGLF": 411,
+			"SGLM": 268,
+			"COUPLES": 411,
+			"SGLFLTC": 849,
+			"SGLMLTC": 752,
+			"COUPLESLTC": 1420
+		},
+		{
+			"age": 58,
+			"SGLF": 421,
+			"SGLM": 274,
+			"COUPLES": 421,
+			"SGLFLTC": 893,
+			"SGLMLTC": 787,
+			"COUPLESLTC": 1486
+		},
+		{
+			"age": 59,
+			"SGLF": 433,
+			"SGLM": 282,
+			"COUPLES": 433,
+			"SGLFLTC": 937,
+			"SGLMLTC": 821,
+			"COUPLESLTC": 1551
+		},
+		{
+			"age": 60,
+			"SGLF": 443,
+			"SGLM": 288,
+			"COUPLES": 443,
+			"SGLFLTC": 980,
+			"SGLMLTC": 856,
+			"COUPLESLTC": 1616
+		},
+		{
+			"age": 61,
+			"SGLF": 465,
+			"SGLM": 303,
+			"COUPLES": 465,
+			"SGLFLTC": 1051,
+			"SGLMLTC": 924,
+			"COUPLESLTC": 1732
+		},
+		{
+			"age": 62,
+			"SGLF": 488,
+			"SGLM": 319,
+			"COUPLES": 488,
+			"SGLFLTC": 1122,
+			"SGLMLTC": 992,
+			"COUPLESLTC": 1854
+		},
+		{
+			"age": 63,
+			"SGLF": 515,
+			"SGLM": 337,
+			"COUPLES": 515,
+			"SGLFLTC": 1193,
+			"SGLMLTC": 1059,
+			"COUPLESLTC": 1969
+		},
+		{
+			"age": 64,
+			"SGLF": 539,
+			"SGLM": 354,
+			"COUPLES": 539,
+			"SGLFLTC": 1264,
+			"SGLMLTC": 1127,
+			"COUPLESLTC": 2088
+		},
+		{
+			"age": 65,
+			"SGLF": 568,
+			"SGLM": 373,
+			"COUPLES": 568,
+			"SGLFLTC": 1335,
+			"SGLMLTC": 1195,
+			"COUPLESLTC": 2206
+		},
+		{
+			"age": 66,
+			"SGLF": 597,
+			"SGLM": 394,
+			"COUPLES": 597,
+			"SGLFLTC": "Call for rates",
+			"SGLMLTC":  "Call for rates",
+			"COUPLESLTC":  "Call for rates"
+		},
+		{
+			"age": 67,
+			"SGLF": 628,
+			"SGLM": 415,
+			"COUPLES": 628,
+			"SGLFLTC": "Call for rates",
+			"SGLMLTC":  "Call for rates",
+			"COUPLESLTC":  "Call for rates"
+		},
+		{
+			"age": 68,
+			"SGLF": 660,
+			"SGLM": 437,
+			"COUPLES": 660,
+			"SGLFLTC": "Call for rates",
+			"SGLMLTC":  "Call for rates",
+			"COUPLESLTC":  "Call for rates"
+		},
+		{
+			"age": 69,
+			"SGLF": 694,
+			"SGLM": 460,
+			"COUPLES": 694,
+			"SGLFLTC": "Call for rates",
+			"SGLMLTC":  "Call for rates",
+			"COUPLESLTC":  "Call for rates"
+		},
+		{
+			"age": 70,
+			"SGLF": 728,
+			"SGLM": 481,
+			"COUPLES": 728,
+			"SGLFLTC": "Call for rates",
+			"SGLMLTC":  "Call for rates",
+			"COUPLESLTC":  "Call for rates"
+		},
+		{
+			"age": 71,
+			"SGLF": 785,
+			"SGLM": 528,
+			"COUPLES": 785,
+			"SGLFLTC": "Call for rates",
+			"SGLMLTC":  "Call for rates",
+			"COUPLESLTC":  "Call for rates"
+		},
+		{
+			"age": 72,
+			"SGLF": 847,
+			"SGLM": 568,
+			"COUPLES": 847,
+			"SGLFLTC": "Call for rates",
+			"SGLMLTC":  "Call for rates",
+			"COUPLESLTC":  "Call for rates"
+		},
+		{
+			"age": 73,
+			"SGLF": 914,
+			"SGLM": 613,
+			"COUPLES": 914,
+			"SGLFLTC": "Call for rates",
+			"SGLMLTC":  "Call for rates",
+			"COUPLESLTC":  "Call for rates"
+		},
+		{
+			"age": 74,
+			"SGLF": 993,
+			"SGLM": 661,
+			"COUPLES": 993,
+			"SGLFLTC": "Call for rates",
+			"SGLMLTC":  "Call for rates",
+			"COUPLESLTC":  "Call for rates"
+		},
+		{
+			"age": 75,
+			"SGLF": 1070,
+			"SGLM": 706,
+			"COUPLES": 1070,
+			"SGLFLTC": "Call for rates",
+			"SGLMLTC":  "Call for rates",
+			"COUPLESLTC":  "Call for rates"
+		}
+	]
+}
