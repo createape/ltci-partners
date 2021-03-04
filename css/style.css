@@ -2583,26 +2583,35 @@ body {
 .about-us .hero__item {
   background-repeat: no-repeat;
   position: relative;
+  background-position-x: 4vw;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1700px) {
   .about-us .hero__item {
-    background-size: cover;
-    background-position-x: 0;
     padding-left: 4vw;
+  }
+}
+
+@media (max-width: 1580px) {
+  .about-us .hero__item {
+    padding-left: 8vw;
   }
 }
 
 @media (max-width: 1250px) {
   .about-us .hero__item {
     margin-top: 142px;
+    background-size: cover;
+    background-position-x: 0;
+    padding-left: 4vw;
   }
 }
 
 @media (max-width: 767px) {
   .about-us .hero__item {
     margin-top: 81px;
-    background-position-x: 0;
+    background-position-x: 50%;
+    background-size: cover;
   }
 }
 
@@ -2642,8 +2651,14 @@ body {
 }
 
 .about-us .hero__item .container {
-  padding-top: 151px;
+  padding-top: 351px;
   padding-bottom: 157px;
+}
+
+@media (max-width: 767px) {
+  .about-us .hero__item .container {
+    padding-top: 120px;
+  }
 }
 
 .about-us .hero__item .container .max-width-790 {

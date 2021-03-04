@@ -1336,18 +1336,24 @@ body{
     .hero__item {
       background-repeat: no-repeat;
       position: relative;
+      background-position-x: 4vw;
+      @media(max-width:1700px){
+        padding-left: 4vw;
+      }
+      @media(max-width:1580px){
+        padding-left: 8vw;
+      }
       @media(max-width:1250px){
+        margin-top: 142px;
         background-size: cover;
         background-position-x: 0;
         padding-left: 4vw;
       }
-  
-      @media(max-width:1250px){
-        margin-top: 142px;
-      }
       @media(max-width:767px){
         margin-top: 81px;
-        background-position-x: 0;
+        background-position-x: 50%;
+        background-size: cover;
+        
       }
       &:after {
         content: "";
@@ -1381,8 +1387,12 @@ body{
         
       }
       .container {
-        padding-top: 151px;
+        padding-top: 351px;
         padding-bottom: 157px;
+        @media(max-width:767px){
+          padding-top: 120px;
+
+        }
         .max-width-790 {
           margin-left: 0px;
           .title-1 {
