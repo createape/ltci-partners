@@ -1259,6 +1259,16 @@ body {
 
 .sample-rates {
   .hero {
+
+    .hero__item {
+      padding-top: 151px;
+      @media (max-width: 1250px){
+        padding-top: 143px;
+        }
+      @media (max-width: 767px){
+          padding-top: 81px;
+      }
+    }
     .hero__item--inner {
       top: 60%;
       .container {
@@ -1276,6 +1286,14 @@ body {
           font-size: 72px;
           line-height: 86px;
           color: #ffffff;
+          @media (max-width: 1200px){
+            font-size: 50px;
+            line-height: 50px;
+          }
+          @media (max-width: 767px){
+            font-size: 34px;
+            line-height: 38px;
+          }
         }
         .text {
           font-style: normal;
@@ -1286,6 +1304,7 @@ body {
           color: #ffffff;
           opacity: 0.8;
         }
+     
       }
     }
   }
@@ -1306,20 +1325,22 @@ body {
   .rates-tabs {
     position: relative;
     z-index: 99;
-    margin-top: -12%;
+    margin-top: -85px;
     @media (max-width: 1200px) {
-      margin-top: -5%;
+     
+    }
+    @media (max-width: 767px) {
+      margin-top: -60px;
     }
     @media (max-width: 991px) {
-      order: 2;
-      margin-top: 0;
-      padding-bottom: 60px;
       .text-3 {
         display: none;
       }
     }
+   
     .container {
-      width: 1220px;
+      width: 100%;
+      max-width: 1220px;
     }
     .card {
       border: 0;
@@ -1338,6 +1359,9 @@ body {
         padding: 0;
         margin: 0;
         list-style: none;
+        @media (max-width: 1200px) {
+          min-height: 116px;
+        }
         li {
           width: 33.3333%;
           display: flex;
@@ -1368,6 +1392,9 @@ body {
             color: #0d193f;
             opacity: 0.4;
             transition: all 0.2s ease-in-out;
+            @media (max-width: 1200px) {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -1391,12 +1418,18 @@ body {
       text-align: center;
       color: #000000;
       margin-top: 104px;
+      @media (max-width: 991px) {
+        font-size: 32px;
+      }
     }
     .slidecontainer {
       width: 100%;
       max-width: 632px;
       margin: 0 auto;
       position: relative;
+      @media (max-width: 991px) {
+        width: 80%;
+      }
       .btn-minus {
         display: block;
         position: absolute;
@@ -1539,6 +1572,10 @@ body {
     .plan__items {
       display: flex;
       justify-content: space-between;
+      @media (max-width: 991px) {
+     flex-wrap: wrap;
+     justify-content: center;
+      }
       & > .plan-item {
         flex: 1 1 auto;
         margin: 0px 40px 0px 0px;
@@ -1553,6 +1590,9 @@ body {
         border: 1px solid #ccd3cf;
         box-sizing: border-box;
         border-radius: 8px;
+        @media (max-width: 991px) {
+        margin-bottom: 40px;
+           }
 
         .plan-heading {
           padding: 45px 16px;

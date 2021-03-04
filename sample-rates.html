@@ -62,9 +62,9 @@
     <div class="hero__item">
       <!-- <img src="./images/hero-min.png" class="img-fluid" alt=""> -->
       <picture>
-        <source media="(min-width:993px)" srcset="./images/sample-rates/hero-1.png">
-        <source media="(max-width:992px)" srcset="./images/hero-2-min.png">
-        <img src="./images/sample-rates/hero-1.png" class="img-fluid" alt="">
+        <img src="./images/sample-rates/hero-1.png" class="img-fluid sr-hero1 sr-heroes" alt="">
+        <img src="./images/sample-rates/hero-2.png" class="img-fluid sr-hero2 sr-heroes" alt="">
+        <img src="./images/sample-rates/hero-3.png" class="img-fluid sr-hero3 sr-heroes" alt="">
       </picture>
       <div class="hero__item--inner">
         <div class="container">
@@ -607,6 +607,9 @@
       // SGLF / SGLM / COUPLES
       $('.slideinfo h3').text(ageRange);
 
+            $('.sr-heroes').fadeOut('fast');
+      $('.sr-hero1').fadeIn();
+
   
       var planA,
           planB,
@@ -850,16 +853,19 @@
       $('#tabs li').click(function () {
         $('#tabs li').removeClass('active');
         $(this).addClass('active');
-
+        $('.sr-heroes').fadeOut('fast');
         console.log('TYPE', $(this).data('type'))
         switch($(this).data('type')) {
             case "SGLF":    
+            $('.sr-hero1').fadeIn();
               planType = "SGLF";
               break;
             case "SGLM":
+            $('.sr-hero2').fadeIn();
               planType = "SGLM";
               break;
             case "COUPLES":
+            $('.sr-hero3').fadeIn();
               planType = "COUPLES";
               break;
           }
