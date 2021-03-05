@@ -1442,6 +1442,18 @@ body{
       @media (max-width: 767px){
           padding-top: 81px;
       }
+
+      .sr-heroes {
+        opacity: 0;
+        position: absolute;
+        transition: all 0.3s ease;
+        &.show {
+          position: relative;
+          left: 0;
+          opacity: 1;
+          width: 100%;
+        }
+      }
     }
     .hero__item--inner {
       top: 60%;

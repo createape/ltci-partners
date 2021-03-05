@@ -2696,6 +2696,20 @@ body {
   }
 }
 
+.sample-rates .hero .hero__item .sr-heroes {
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.sample-rates .hero .hero__item .sr-heroes.show {
+  position: relative;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+}
+
 .sample-rates .hero .hero__item--inner {
   top: 60%;
 }

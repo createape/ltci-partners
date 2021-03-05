@@ -112,7 +112,7 @@
             <h3>50</h3>
             <p>Years Old</p>
             <div class="divider-arrow"></div>
-            <h4>Sample rates<span>1</span> for single females </h4>
+            <h4>Sample rates<span>1</span> for <b>single females</b> </h4>
             <h5>Up to <b>15% discount off</b> the single rate is available if married, applying alone. </h5>
           </div>
           <div class="plan__items">
@@ -607,8 +607,8 @@
       // SGLF / SGLM / COUPLES
       $('.slideinfo h3').text(ageRange);
 
-      $('.sr-heroes').fadeOut('fast');
-      $('.sr-hero1').fadeIn('fast');
+    
+      $('.sr-hero1').addClass('show');
 
   
       var planA,
@@ -853,23 +853,24 @@
       $('#tabs li').click(function () {
         $('#tabs li').removeClass('active');
         $(this).addClass('active');
-        $('.hero__item--inner').fadeOut('fast');
-        $('.sr-heroes').fadeOut('fast');
+  
+        $('.sr-heroes').removeClass('show');
         console.log('TYPE', $(this).data('type'))
         switch($(this).data('type')) {
             case "SGLF":    
-            $('.sr-hero1').fadeIn('slow');
-    
+        
+              $('.sr-hero1').addClass('show');
+              $('.slideinfo h4 b').text("single females");
               planType = "SGLF";
               break;
             case "SGLM":
-            $('.sr-hero2').fadeIn('slow');
-   
+            $('.sr-hero2').addClass('show');
+             $('.slideinfo h4 b').text("single males");
               planType = "SGLM";
               break;
             case "COUPLES":
-            $('.sr-hero3').fadeIn('slow');
-      
+            $('.sr-hero3').addClass('show');
+             $('.slideinfo h4 b').text("couples");
               planType = "COUPLES";
               break;
           }
