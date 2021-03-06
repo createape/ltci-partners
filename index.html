@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="./css/hamburgers.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="./css/style.css">
+        <!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+
     <title>Home</title>
   </head>
   <body>
@@ -759,6 +764,76 @@
       </div>
     </div>
 
+    <!-- LTCI Modal -->
+    <div class="modal fade" id="modalGetStarted" tabindex="-1" role="dialog" aria-labelledby="{{ module.modal_id }}Title" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- <h5 class="modal-title" id="howmuchTitle">Modal title</h5> -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-5 left">
+                <h3 class="title-7 mt-3">GET STARTED</h3>
+                <h2 class="title-3 mt-3">What to expect from us</h2>  
+               <ul>
+                 <li>
+                  <div class="img">
+                   <img src="/images/modal/icon-1.png" />
+                  </div>
+                   <div class="info">
+                   <h4>No pressure.</h4>
+                   <p>Our specialists focus on your needs.</p>
+                   </div>
+                 </li>
+                 <li>
+                  <div class="img">
+                  <img src="/images/modal/icon-2.png" />
+                  </div>
+                  <div class="info">
+                  <h4>No agent in your home. </h4>
+                  <p>We work entirely by phone.</p>
+                </div>
+                </li>
+                <li>
+                  <div class="img">
+                  <img src="/images/modal/icon-3.png" />
+                  </div>
+                  <div class="info">
+                  <h4>We'll make it simple. </h4>
+                  <p>Our experienced representatives help you own meaningful benefits that fit your budget. </p>
+                </div>
+                </li>
+                <li>
+                  <div class="img">
+                  <img src="/images/modal/icon-4.png" />
+                </div>
+                  <div class="info">
+                  <h4>Hours of operation.</h4>
+                  <p>Weekdays, 8-5 Central. We strive to accommodate after hours and weekend requests.  Please share your preferred time to be contacted and we will do our best to accommodate it.  </p>
+                  </div>
+                </li>
+               </ul>
+              </div>
+              <div class="col-md-7 right">
+                <h2 class="title-3 mt-3">Request a complimentary consultation</h2>
+                <script>
+                  hbspt.forms.create({
+                  portalId: "405630",
+                  formId: "5925780c-3a32-4124-803f-7477e85a42e8"
+                });
+                </script>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -769,5 +844,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/app.js"></script>
+    <script>
+
+      $( document ).ready(function() {
+            $('#modalGetStarted').modal(); 
+      });
+    </script>
+
   </body>
 </html>

@@ -2504,4 +2504,135 @@ body {
             transform: translate(-50%, -50%) scale(1);
   }
 }
+
+#modalGetStarted .modal-body {
+  padding: 0;
+}
+
+#modalGetStarted .modal-body .left {
+  background-color: #1B4631;
+  padding: 104px 96px;
+}
+
+#modalGetStarted .modal-body .left h3 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+#modalGetStarted .modal-body .left h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 58px;
+  line-height: 110%;
+  /* or 70px */
+  color: #FFFFFF;
+  margin-bottom: 40px;
+}
+
+#modalGetStarted .modal-body .left ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+#modalGetStarted .modal-body .left ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-bottom: 40px;
+}
+
+#modalGetStarted .modal-body .left ul li .img {
+  max-width: 58px;
+  width: 100%;
+  height: auto;
+}
+
+#modalGetStarted .modal-body .left ul li h4 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 160%;
+  /* or 38px */
+  color: #FFFFFF;
+}
+
+#modalGetStarted .modal-body .left ul li p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 160%;
+  /* or 32px */
+  color: #FFFFFF;
+}
+
+#modalGetStarted .modal-body .right {
+  padding: 80px 88px;
+}
+
+#modalGetStarted .modal-body .right label span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 160%;
+  /* or 38px */
+  color: #0D193F;
+  opacity: 0.8;
+}
+
+#modalGetStarted .modal-body .right .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#modalGetStarted .modal-body .right input {
+  background: #FFFFFF;
+  border: 2px solid #C5CCC8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  max-width: 328px;
+  width: 100%;
+  height: 70px;
+}
+
+#modalGetStarted .modal-body .right input.hs-button {
+  max-width: 464px;
+  width: 100%;
+  height: 82px;
+  left: 124.5px;
+  top: 618px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 20px;
+  /* identical to box height, or 91% */
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  background: #2D995E;
+  border-radius: 6px;
+}
+
+#modalGetStarted .modal-body .right fieldset {
+  max-width: 100%;
+  margin-bottom: 48px;
+}
+
+#modalGetStarted .modal-body .right textarea {
+  width: 100%;
+  height: 151px;
+  background: #FFFFFF;
+  border: 2px solid #C5CCC8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+}
 /*# sourceMappingURL=style.css.map */
