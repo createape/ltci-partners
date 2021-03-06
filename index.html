@@ -820,12 +820,18 @@
               </div>
               <div class="col-md-7 right">
                 <h2 class="title-3 mt-3">Request a complimentary consultation</h2>
+                <img src="/images/modal/thanks-icon.svg" class="thanks" />
                 <script>
                   hbspt.forms.create({
                   portalId: "405630",
-                  formId: "5925780c-3a32-4124-803f-7477e85a42e8"
+                  formId: "5925780c-3a32-4124-803f-7477e85a42e8",
+                  onFormSubmit: function($form) {
+                    console.log($form)
+                    $('#modalGetStarted .modal-body').addClass('thank-you');
+                  } 
                 });
                 </script>
+                <input type="submit" onclick="$('#modalGetStarted').modal('hide');" value="Perfect, thanks!" class="hs-button primary large thanks">
               </div>
              
             </div>
@@ -848,6 +854,7 @@
 
       $( document ).ready(function() {
             $('#modalGetStarted').modal(); 
+           
       });
     </script>
 

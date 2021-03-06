@@ -2507,11 +2507,56 @@ body {
 
 #modalGetStarted .modal-body {
   padding: 0;
+  overflow: hidden;
+}
+
+#modalGetStarted .modal-body.thank-you .left {
+  left: -100%;
+  display: none;
+}
+
+#modalGetStarted .modal-body.thank-you .right {
+  max-width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  text-align: center;
+}
+
+#modalGetStarted .modal-body.thank-you .right .submitted-message p:nth-child(1) {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #0D193F;
+}
+
+#modalGetStarted .modal-body.thank-you .right .submitted-message p:nth-child(2) {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 150%;
+  /* or 42px */
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #0D193F;
+  opacity: 0.8;
+}
+
+#modalGetStarted .modal-body.thank-you .right .thanks {
+  display: block;
+  margin: 0 auto;
+}
+
+#modalGetStarted .modal-body.thank-you .right h2 {
+  display: none;
 }
 
 #modalGetStarted .modal-body .left {
   background-color: #1B4631;
   padding: 104px 96px;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 #modalGetStarted .modal-body .left h3 {
@@ -2574,6 +2619,10 @@ body {
 
 #modalGetStarted .modal-body .right {
   padding: 80px 88px;
+}
+
+#modalGetStarted .modal-body .right .thanks {
+  display: none;
 }
 
 #modalGetStarted .modal-body .right label span {

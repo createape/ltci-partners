@@ -1275,12 +1275,63 @@ body{
 
 
 #modalGetStarted {
+
   
   .modal-body {
     padding: 0;
+    overflow: hidden;
+
+    &.thank-you {
+      .left {
+        left: -100%;
+        display: none;
+
+       
+      }
+      .right {
+        max-width: 100%;
+        flex: 0 0 100%;
+        text-align: center;
+        .submitted-message {
+          p:nth-child(1){
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 48px;
+            text-align: center;
+
+            color: #0D193F;
+          }
+          p:nth-child(2){
+            font-style: normal;
+            font-weight: normal;
+            font-size: 28px;
+            line-height: 150%;
+            /* or 42px */
+            text-align: center;
+            letter-spacing: -0.01em;
+            
+            color: #0D193F;
+            
+            opacity: 0.8;
+          }
+        }
+        .thanks {
+          display: block;
+          margin: 0 auto;
+
+        }
+        h2 {
+          display: none;
+        }
+      }
+
+    }
+    
     .left {
       background-color: #1B4631;
       padding: 104px 96px;
+      transition: all 0.5s ease-out;
+  
       h3 {
         font-style: normal;
         font-weight: 900;
@@ -1335,6 +1386,9 @@ body{
     }
     .right {
       padding: 80px 88px;
+      .thanks {
+        display: none;
+      }
       label {
         span {
           font-style: normal;
