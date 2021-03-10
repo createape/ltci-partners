@@ -56,9 +56,19 @@
     </header>
 
     <section class="hero about-us">
-      <div class="hero__item" style="background-image: url('./images/bg-about-us.png');">
+      <style scoped>
+        .hero__item {
+          background-image: url('./images/bg-about-us.png');
+        }
+        @media (max-width: 767px) {
+            .hero__item {
+              background-image: url('./images/bg-about-us-mobile.png');
+            }
+        }
+        </style>
+      <div class="hero__item">
         <!-- <img src="./images/hero-min.png" class="img-fluid" alt=""> -->
-        <button style="background-image: url(./images/btn-about_us-arrow.svg);"></button>
+        <button id="goBelow" style="background-image: url(./images/btn-about_us-arrow.svg);"></button>
       
         <div class="hero__item--inner">
           <div class="container">
@@ -485,5 +495,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/app.js"></script>
+    <script>
+  $("#goBelow").on("click", function () {
+   var goBelow = $("#goBelow");
+    $('html,body').animate({scrollTop: goBelow.offset().top},'slow');
+  });
+
+    </script>
   </body>
 </html>
