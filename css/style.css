@@ -978,6 +978,7 @@ body {
   background-color: #F9F9F9;
   height: 200vh;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .header {
@@ -1763,6 +1764,14 @@ body {
   padding-bottom: 160px;
 }
 
+@media (max-width: 767px) {
+  .insurance-made-simple__about_us.after-modified {
+    padding-top: 80px;
+    margin-top: 100px;
+    padding-bottom: 60px;
+  }
+}
+
 .insurance-made-simple__about_us.after-modified::before {
   background: none;
 }
@@ -1813,6 +1822,12 @@ body {
 
 .insurance-made-simple .insurance-made-simple-container {
   padding-top: 100px;
+}
+
+@media (max-width: 767px) {
+  .insurance-made-simple .insurance-made-simple-container {
+    padding-top: 20px;
+  }
 }
 
 .insurance-made-simple .insurance-made-simple__item {
@@ -1891,6 +1906,12 @@ body {
 
 .why-we-do-it {
   margin-top: 167px;
+}
+
+@media (max-width: 767px) {
+  .why-we-do-it {
+    margin-top: 130px;
+  }
 }
 
 .why-we-do-it h3 {
@@ -2616,7 +2637,7 @@ body {
 .about-us .hero__item {
   background-repeat: no-repeat;
   position: relative;
-  background-position-x: 4vw;
+  background-position-x: calc(50% - -100px);
 }
 
 @media (max-width: 1700px) {
@@ -2644,7 +2665,7 @@ body {
     background-position: 80%;
     background-size: cover;
     padding-left: 0;
-    height: 75vh;
+    height: 82vh;
   }
 }
 
@@ -2670,7 +2691,7 @@ body {
   display: block;
   border: 0;
   padding: 0;
-  left: 6vw;
+  left: 1vw;
   bottom: -58px;
   z-index: 2;
 }
@@ -2684,7 +2705,7 @@ body {
 }
 
 .about-us .hero__item .container {
-  padding-top: 257px;
+  padding-top: 105px;
   padding-bottom: 100px;
 }
 
@@ -2716,12 +2737,18 @@ body {
 @media (max-width: 767px) {
   .about-us .hero__item--inner {
     top: 0px;
+    position: unset;
   }
+}
+
+.about-us .hero__item--inner .container {
+  position: relative;
 }
 
 @media (max-width: 767px) {
   .about-us .hero__item--inner .container {
-    margin-top: 81px;
+    position: unset;
+    margin-top: 0px;
     padding-top: 0px;
   }
 }
@@ -2738,12 +2765,12 @@ body {
   .about-us .hero__item--inner .container .title-1 {
     font-weight: 600;
     font-size: 32px;
-    max-width: 241px !important;
+    max-width: 301px !important;
     line-height: 110%;
   }
 }
 
-.about-us .hero__item--inner p.text {
+.about-us .hero__item--inner .text, .about-us .hero__item--inner .testimonials .testimonials__images__item__text span, .testimonials .testimonials__images__item__text .about-us .hero__item--inner span {
   max-width: 590px;
   /* or 42px */
   letter-spacing: -0.01em;
@@ -2752,7 +2779,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  .about-us .hero__item--inner p.text {
+  .about-us .hero__item--inner .text, .about-us .hero__item--inner .testimonials .testimonials__images__item__text span, .testimonials .testimonials__images__item__text .about-us .hero__item--inner span {
     display: none;
   }
 }
@@ -2835,6 +2862,12 @@ body {
           flex: 0 0 48px;
 }
 
+@media (max-width: 767px) {
+  .sample-rates .hero .hero__item {
+    min-height: auto;
+  }
+}
+
 .sample-rates .hero .hero__item .sr-heroes {
   opacity: 0;
   position: absolute;
@@ -2853,9 +2886,15 @@ body {
   top: 60%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   .sample-rates .hero .hero__item--inner {
-    top: 22%;
+    top: 45%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sample-rates .hero .hero__item--inner {
+    top: 50%;
   }
 }
 
@@ -2883,6 +2922,12 @@ body {
   }
 }
 
+@media (max-width: 400px) {
+  .sample-rates .hero .hero__item--inner .container .title-6 {
+    font-size: 12px;
+  }
+}
+
 .sample-rates .hero .hero__item--inner .container .title-1 {
   color: #fff;
   font-weight: 500;
@@ -2898,11 +2943,18 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .sample-rates .hero .hero__item--inner .container .title-1 {
     font-size: 34px;
     line-height: 38px;
     margin-bottom: 2px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .sample-rates .hero .hero__item--inner .container .title-1 {
+    font-size: 21px;
+    line-height: 110%;
   }
 }
 
@@ -2925,6 +2977,12 @@ body {
 @media (max-width: 767px) {
   .sample-rates .hero .hero__item--inner .container .text, .sample-rates .hero .hero__item--inner .container .testimonials .testimonials__images__item__text span, .testimonials .testimonials__images__item__text .sample-rates .hero .hero__item--inner .container span {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sample-rates .hero .hero__item--inner .container .text, .sample-rates .hero .hero__item--inner .container .testimonials .testimonials__images__item__text span, .testimonials .testimonials__images__item__text .sample-rates .hero .hero__item--inner .container span {
+    font-size: 12px;
   }
 }
 
@@ -3038,7 +3096,7 @@ body {
 }
 
 .sample-rates .rates-tabs .sample-rates-slider__container #tabs li.active a {
-  font-weight: 900;
+  font-weight: 500;
   opacity: 1;
 }
 
@@ -3060,6 +3118,20 @@ body {
 @media (max-width: 1200px) {
   .sample-rates .rates-tabs .sample-rates-slider__container #tabs li a {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sample-rates .rates-tabs .sample-rates-slider__container #tabs li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .sample-rates .rates-tabs .sample-rates-slider__container #tabs li a {
+    font-size: 14px;
+    padding-left: 7px;
+    padding-right: 7px;
   }
 }
 
@@ -3312,6 +3384,12 @@ body {
   border-bottom: 1px solid #ccd3cf;
 }
 
+@media (max-width: 737px) {
+  .sample-rates .tabs-container .plan__items .plan-item .plan-heading {
+    padding: 25px 16px;
+  }
+}
+
 .sample-rates .tabs-container .plan__items .plan-item .plan-heading h2 {
   font-weight: bold;
   font-size: 48px;
@@ -3349,6 +3427,12 @@ body {
   margin-bottom: 20px;
 }
 
+@media (max-width: 737px) {
+  .sample-rates .tabs-container .plan__items .plan-item .plan-details li {
+    text-align: center;
+  }
+}
+
 .sample-rates .tabs-container .plan__items .plan-item .plan-details li:before {
   background-image: url("https://f.hubspotusercontent30.net/hubfs/405630/icon-check.png");
   background-repeat: no-repeat;
@@ -3384,6 +3468,12 @@ body {
   opacity: 0.8;
   padding: 15px 16px;
   margin-bottom: 0;
+}
+
+@media (max-width: 737px) {
+  .sample-rates .tabs-container .plan__items .plan-item .plan-life-insurance p {
+    font-size: 16px;
+  }
 }
 
 .sample-rates .tabs-container .plan__items .plan-item .plan-life-insurance p b {
@@ -3431,33 +3521,8 @@ body {
 }
 
 .sample-rates .bottom-info .btn {
-  max-width: 408px;
-  height: 88px;
-  background: #2d995e;
   display: block;
   margin: 0 auto;
-  width: 100%;
-  font-weight: bold;
-  font-size: 24px;
-  /* identical to box height, or 34px */
-  text-align: center;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.sample-rates .bottom-info .btn:hover {
-  background-color: #0d3420;
 }
 
 .sample-rates .bottom-info .copy {
