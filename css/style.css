@@ -1766,9 +1766,17 @@ body {
 
 @media (max-width: 767px) {
   .insurance-made-simple__about_us.after-modified {
-    padding-top: 80px;
-    margin-top: 100px;
+    padding-top: 0px;
+    margin-top: 0px;
     padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .insurance-made-simple__about_us.after-modified .about_us {
+    padding-bottom: 0;
+    margin-bottom: -24px;
+    z-index: 2;
   }
 }
 
@@ -1910,7 +1918,7 @@ body {
 
 @media (max-width: 767px) {
   .why-we-do-it {
-    margin-top: 130px;
+    margin-top: 100px;
   }
 }
 
@@ -1952,13 +1960,20 @@ body {
   margin-top: 50px;
 }
 
+@media (max-width: 767px) {
+  .why-we-do-it p {
+    margin-top: 0px;
+    margin-bottom: 32px !important;
+  }
+}
+
 .why-we-do-it img {
   margin-top: 128px;
 }
 
 @media (max-width: 767px) {
   .why-we-do-it img {
-    margin-top: 50px;
+    margin-top: 0px;
   }
 }
 
@@ -1967,6 +1982,12 @@ body {
   padding-bottom: 60px;
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .about_us {
+    padding-bottom: 58px;
+  }
 }
 
 .about_us .about_us_team {
@@ -2951,6 +2972,12 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .sample-rates .hero .hero__item--inner .container .title-1 {
+    margin-top: 0px;
+  }
+}
+
 @media (max-width: 600px) {
   .sample-rates .hero .hero__item--inner .container .title-1 {
     font-size: 21px;
@@ -3147,6 +3174,12 @@ body {
   margin: 0 auto 100px;
 }
 
+@media (max-width: 767px) {
+  .sample-rates .tabs-container {
+    margin: 0 auto 26px;
+  }
+}
+
 .sample-rates .tabs-container .title-1 {
   font-style: normal;
   font-weight: bold;
@@ -3173,6 +3206,12 @@ body {
 @media (max-width: 991px) {
   .sample-rates .tabs-container .slidecontainer {
     width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .sample-rates .tabs-container .slidecontainer {
+    width: 70%;
   }
 }
 
@@ -3384,9 +3423,9 @@ body {
   border-bottom: 1px solid #ccd3cf;
 }
 
-@media (max-width: 737px) {
+@media (max-width: 767px) {
   .sample-rates .tabs-container .plan__items .plan-item .plan-heading {
-    padding: 25px 16px;
+    padding: 12px 16px;
   }
 }
 
@@ -3398,6 +3437,12 @@ body {
   color: #0d193f;
 }
 
+@media (max-width: 767px) {
+  .sample-rates .tabs-container .plan__items .plan-item .plan-heading h2 {
+    font-size: 40px;
+  }
+}
+
 .sample-rates .tabs-container .plan__items .plan-item .plan-heading p {
   font-style: normal;
   font-weight: normal;
@@ -3407,6 +3452,12 @@ body {
   text-align: center;
   color: #0d193f;
   opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+  .sample-rates .tabs-container .plan__items .plan-item .plan-heading p {
+    font-size: 18px;
+  }
 }
 
 .sample-rates .tabs-container .plan__items .plan-item .plan-details {
@@ -3427,9 +3478,10 @@ body {
   margin-bottom: 20px;
 }
 
-@media (max-width: 737px) {
+@media (max-width: 767px) {
   .sample-rates .tabs-container .plan__items .plan-item .plan-details li {
-    text-align: center;
+    text-align: left;
+    font-size: 16px;
   }
 }
 
@@ -3492,6 +3544,12 @@ body {
   border-radius: 0 0 8px 8px;
 }
 
+@media (max-width: 767px) {
+  .sample-rates .tabs-container .plan__items .plan-item .plan-price {
+    padding: 25px 16px;
+  }
+}
+
 .sample-rates .tabs-container .plan__items .plan-item .plan-price h3 {
   font-style: normal;
   font-weight: normal;
@@ -3504,6 +3562,12 @@ body {
   color: #ffffff;
 }
 
+@media (max-width: 767px) {
+  .sample-rates .tabs-container .plan__items .plan-item .plan-price h3 {
+    font-size: 50px;
+  }
+}
+
 .sample-rates .tabs-container .plan__items .plan-item .plan-price p {
   font-style: normal;
   font-weight: bold;
@@ -3514,10 +3578,22 @@ body {
   color: #97ecc8;
 }
 
+@media (max-width: 767px) {
+  .sample-rates .tabs-container .plan__items .plan-item .plan-price p {
+    font-size: 18px;
+  }
+}
+
 .sample-rates .bottom-info {
   max-width: 1304px;
   width: 100%;
   margin: 0 auto 200px;
+}
+
+@media (max-width: 767px) {
+  .sample-rates .bottom-info {
+    margin: 0 auto 80px;
+  }
 }
 
 .sample-rates .bottom-info .btn {

@@ -657,10 +657,18 @@ body{
     margin-top: 160px;
     padding-bottom: 160px;
     @media(max-width:767px){
-      padding-top: 80px;
-      margin-top: 100px;
+      padding-top: 0px;
+      margin-top: 0px;
       padding-bottom: 60px;
     }
+    @media(max-width:767px){
+      .about_us {
+        padding-bottom: 0;
+        margin-bottom: -24px;
+        z-index: 2;
+      }
+    }
+   
     &::before {
       background:none;
     }
@@ -780,8 +788,8 @@ body{
 }
 .why-we-do-it {
   margin-top: 167px;
-  @media(max-width:767px){
-    margin-top: 130px;
+  @media (max-width: 767px){
+    margin-top: 100px;
   }
   h3 {
     font-weight: 600;
@@ -812,11 +820,15 @@ body{
   }
   p{
     margin-top: 50px;
+    @media (max-width: 767px){
+      margin-top: 0px;
+      margin-bottom: 32px !important;
+    }
   }
   img {
     margin-top: 128px;
     @media (max-width: 767px){
-      margin-top: 50px;
+      margin-top: 0px;
     }
   }
 }
@@ -825,6 +837,9 @@ body{
   padding-bottom: 60px;
   position: relative;
   overflow: hidden;
+  @media(max-width:767px){
+    padding-bottom: 58px;
+  }
   .about_us_team{
     width: 2180px;
     margin-left: -15px;
@@ -1634,6 +1649,9 @@ padding-bottom: 240px;
             line-height: 38px;
             margin-bottom: 2px !important;
           }
+          @media (max-width: 767px){
+            margin-top: 0px;
+          }
           @media (max-width: 600px){
             font-size: 21px;
             line-height: 110%;
@@ -1775,6 +1793,9 @@ padding-bottom: 240px;
     max-width: 1304px;
     width: 100%;
     margin: 0 auto 100px;
+    @media (max-width: 767px) {
+      margin: 0 auto 26px;
+    }
     .title-1 {
       font-style: normal;
       font-weight: bold;
@@ -1792,8 +1813,12 @@ padding-bottom: 240px;
       max-width: 632px;
       margin: 0 auto;
       position: relative;
+
       @media (max-width: 991px) {
         width: 80%;
+      }
+      @media (max-width: 767px) {
+        width: 70%;
       }
       .btn-minus {
         display: block;
@@ -1965,8 +1990,8 @@ padding-bottom: 240px;
         .plan-heading {
           padding: 45px 16px;
           border-bottom: 1px solid #ccd3cf;
-          @media (max-width: 737px) {
-            padding: 25px 16px;
+          @media (max-width: 767px) {
+            padding: 12px 16px;
           }
           h2 {
             font-weight: bold;
@@ -1974,6 +1999,9 @@ padding-bottom: 240px;
             line-height: 57px;
             text-align: center;
             color: #0d193f;
+            @media (max-width: 767px) {
+              font-size: 40px;
+            }
           }
           p {
             font-style: normal;
@@ -1987,6 +2015,9 @@ padding-bottom: 240px;
             color: #0d193f;
 
             opacity: 0.8;
+            @media (max-width: 767px) {
+              font-size: 18px;
+            }
           }
         }
         .plan-details {
@@ -2003,8 +2034,9 @@ padding-bottom: 240px;
             color: #0d193f;
             opacity: 0.8;
             margin-bottom: 20px;
-            @media (max-width: 737px) {
-              text-align: center;
+            @media (max-width: 767px) {
+              text-align: left;
+              font-size: 16px;
             }
             &:before {
               background-image: url("https://f.hubspotusercontent30.net/hubfs/405630/icon-check.png");
@@ -2051,6 +2083,9 @@ padding-bottom: 240px;
           box-shadow: inset 0px 1px 0px #061f12;
           padding: 35px 16px;
           border-radius: 0 0 8px 8px;
+          @media (max-width: 767px) {
+            padding: 25px 16px;
+          }
 
           h3 {
             font-style: normal;
@@ -2063,6 +2098,9 @@ padding-bottom: 240px;
             letter-spacing: -0.02em;
 
             color: #ffffff;
+            @media (max-width: 767px) {
+              font-size: 50px;
+            }
           }
           p {
             font-style: normal;
@@ -2074,6 +2112,9 @@ padding-bottom: 240px;
             text-align: center;
 
             color: #97ecc8;
+            @media (max-width: 767px) {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -2083,6 +2124,9 @@ padding-bottom: 240px;
     max-width: 1304px;
     width: 100%;
     margin: 0 auto 200px;
+    @media (max-width: 767px) {
+      margin: 0 auto 80px;
+    }
     .btn {
       display: block;
       margin: 0 auto;
@@ -2113,6 +2157,7 @@ padding-bottom: 240px;
     }
   }
 }
+
 
 .switch {
   position: relative;
@@ -2361,13 +2406,3 @@ padding-bottom: 240px;
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
