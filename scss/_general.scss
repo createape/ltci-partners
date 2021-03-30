@@ -1,11 +1,15 @@
 @import "./vars";
 
 .gray-body{
-  padding-top: 142px;
+  padding-top: 128px;
   background-color: #F9F9F9;
   @media(max-width:992px){
     padding-top: 80px;
   }
+  .ready_to_get_started{
+    background-color: #F9F9F9;
+  }
+
 }
 
 .container{
@@ -30,7 +34,7 @@
   }
 }
 .title-1{
-  font-size: 72px;
+  font-size: 56px;
   font-family: $font;
   font-weight: 700;
   color: $black;
@@ -57,12 +61,21 @@
   }
 }
 .title-3{
+  font-size: 32px;
+  font-family: $font;
+  font-weight: 700;
+  color: $black;
+  @media (max-width:1200px) {
+    font-size: 28px;
+  }
+}
+.title-3_2{
   font-size: 40px;
   font-family: $font;
   font-weight: 700;
   color: $black;
   @media (max-width:1200px) {
-    font-size: 34px;
+    font-size: 28px;
   }
 
 }
@@ -76,21 +89,21 @@
   }
 }
 .title-5{
-  font-size: 32px;
+  font-size: 24px;
   font-family: $font;
   font-weight: 700;
   color: $black;
   @media (max-width:1200px) {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 .title-6{
-  font-size: 28px;
+  font-size: 24px;
   font-family: $font;
   font-weight: 700;
   color: $black;
   @media (max-width:1200px) {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
@@ -112,15 +125,15 @@
   color: $green;
 }
 
-.text{
-  font-size: 28px;
+.text-0{
+  font-size: 24px;
   font-family: $font;
   color: $black;
   @media (max-width:1200px) {
     font-size: 22px;
   }
   @media (max-width:1200px) {
-    font-size: 22px;
+    font-size: 21px;
   }
   @media (max-width:767px) {
     font-size: 20px;
@@ -143,21 +156,50 @@
       }
   }
 }
+
+.text{
+  font-size: 20px;
+  font-family: $font;
+  color: $black;
+  @media (max-width:1200px) {
+    font-size: 18px;
+  }
+  @media (max-width:767px) {
+    font-size: 17px;
+  }
+  .line-spacing{
+    font-weight: 700;
+    position: relative;
+      &::before,&::after{
+        content: "";
+        display: inline-block;
+        width: 43px;
+        height: 1px;
+        position: relative;
+        background-color: #CFD3DD;
+        margin: 10px 10px;
+        @media (max-width:1200px) {
+          margin: 6px 10px;
+          width: 26px;
+        }
+      }
+  }
+}
 .text-2{
-  font-size: 24px;
+  font-size: 20px;
   font-family: $font;
   color: $black;
   line-height: 180%;
   @media (max-width:1200px) {
-    font-size: 20px;
+    font-size: 18px;
   }
   p{
-    font-size: 24px;
+    font-size: 20px;
     font-family: $font;
     color: $black;
     line-height: 180%;
     @media (max-width:1200px) {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 }
@@ -396,6 +438,10 @@
   max-width: 580px !important;
 }
 
+.max-width-500{
+  max-width: 500px !important;
+}
+
 .min-width-300{
   @media(min-width:767px){
     min-width: 300px;
@@ -583,19 +629,16 @@
   }
 
   li,p{
-    font-size: 28px;
+    font-size: 20px;
     font-family: $font;
     color: $black;
     // margin-bottom: 3rem!important;
 
     @media (max-width:1200px) {
-      font-size: 22px;
-    }
-    @media (max-width:1200px) {
-      font-size: 22px;
+      font-size: 18px;
     }
     @media (max-width:767px) {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 
@@ -683,12 +726,14 @@
 }
 
 .form-control{
-  border-radius: 4px;
-  border: 2px solid #C5CCC8;
-  height: 70px;
-  color: #0D193F;
-  font-size: 20px;
-  font-weight: 600;
+  border-radius: 4px !important;
+  border: 2px solid #C5CCC8 !important;
+  height: 70px !important;
+  color: #0D193F !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
   &::placeholder{
     color:#83899c;
     font-weight: 400;
@@ -783,6 +828,10 @@
   }
 }
 
+.green-p-a a{
+  text-decoration: underline;
+  color: #2D995E;
+}
 
 
 

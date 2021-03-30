@@ -22,7 +22,7 @@ body{
     box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.05);
   }
   .navbar{
-    padding: 40px 0 !important;
+    padding: 26px 0 !important;
     position:initial;
     @media (max-width:767px) {
       padding: 7px 0 !important;
@@ -47,7 +47,7 @@ body{
         }
       }
       img{
-        width: 246px;
+        width: 176px;
         @media (max-width:767px) {
           width:115px;
         }
@@ -87,7 +87,7 @@ body{
           margin-left: 5px;
           margin-right: 5px;
         }
-        @media(max-width:1050px){
+        @media(max-width:1150px){
           margin-left: 0px;
           margin-right: 0px;
         }
@@ -101,8 +101,12 @@ body{
             font-size: 19px;
             color: $black;
             font-weight: 500;
-            @media(max-width:1250px){
+            @media(max-width:1400px){
               font-size: 16px;
+              line-height: 45px;
+            }
+            @media(max-width:1150px){
+              font-size: 14px;
               line-height: 45px;
             }
             @media (max-width:991px) {
@@ -129,7 +133,7 @@ body{
             }
           }
           &.btn-1{
-            @media(max-width:1250px){
+            @media(max-width:1400px){
               height: 60px;
               line-height: 42px;
               font-size: 18px;
@@ -144,6 +148,12 @@ body{
   }
   &.white{
     background-color: #ffffff;
+    .navbar{
+      padding: 33px 0 !important;
+      @media (max-width:767px) {
+        padding: 7px 0 !important;
+      }
+    }
     .navbar-nav{
       .nav-item{
         .nav-link{
@@ -166,7 +176,12 @@ body{
   }
   &.green{
     background-color: #0E3B26;
-    ///////////
+    .navbar{
+      padding: 33px 0 !important;
+      @media (max-width:767px) {
+        padding: 7px 0 !important;
+      }
+    }
     &.active{
       background-color: #0E3B26e6 !important;
       box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.05);
@@ -239,7 +254,8 @@ body{
 }
 
 .hero{
-
+  position: relative;
+  z-index: 99;
   &__item{
     position: relative;
     min-height: 300px;
@@ -432,8 +448,8 @@ body{
       float: none !important;
       height: auto;
       @media(max-width:767px){
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
       }
     }
     .learn-explore__slider__item--inner{
@@ -443,7 +459,7 @@ body{
       border-radius: 8px;
       background-color: transparent;
       transition: background-color .5s ease-in-out,box-shadow .5s ease-in-out;
-      min-height: 344px;
+      min-height: 300px;
       position: relative;
       .text-2{
         color: #0D193F;
@@ -657,9 +673,16 @@ body{
     margin-top: 160px;
     padding-bottom: 160px;
     @media(max-width:767px){
-      padding-top: 80px;
-      margin-top: 100px;
+      padding-top: 0px;
+      margin-top: 0px;
       padding-bottom: 60px;
+    }
+    @media(max-width:767px){
+      .about_us {
+        padding-bottom: 0;
+        margin-bottom: -24px;
+        z-index: 2;
+      }
     }
     &::before {
       background:none;
@@ -679,6 +702,15 @@ body{
     }
   }
 }
+.after-modified{
+@media(max-width:767px){
+  padding-top: 0px !important;
+  .about_us {
+    padding-bottom: 0;
+    margin-bottom: -24px;
+    z-index: 2;
+  }
+}}
 
 .insurance-made-simple{
   padding-top: 180px;
@@ -780,8 +812,8 @@ body{
 }
 .why-we-do-it {
   margin-top: 167px;
-  @media(max-width:767px){
-    margin-top: 130px;
+  @media (max-width: 767px){
+    margin-top: 100px;
   }
   h3 {
     font-weight: 600;
@@ -812,11 +844,15 @@ body{
   }
   p{
     margin-top: 50px;
+    @media (max-width: 767px){
+      margin-top: 0px;
+      margin-bottom: 32px !important;
+    }
   }
   img {
     margin-top: 128px;
     @media (max-width: 767px){
-      margin-top: 50px;
+      margin-top: 0px;
     }
   }
 }
@@ -825,6 +861,9 @@ body{
   padding-bottom: 60px;
   position: relative;
   overflow: hidden;
+  @media(max-width:767px){
+    padding-bottom: 58px;
+  }
   .about_us_team{
     width: 2180px;
     margin-left: -15px;
@@ -1100,19 +1139,21 @@ body{
     background-position: 40%;
     background-repeat: no-repeat;
     width:150%;
-    height: 70%;
-    top: 140px;
+    height: 62%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%) rotate(-2.5deg);
-
+    transform: translate(-50%,-50%) rotate(-2.5deg);
+    @media(max-width:767px){
+      transform: translate(-50%,-62%) rotate(-2.5deg);
+    }
   }
   .card{
     max-width: 660px;
     margin-left: auto;
-    margin-top: -160px;
+    margin-top: -48px;
     border: 0;
     background: #FFFFFF;
-    box-shadow: 0px 60px 160px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
     @media(max-width:991px){
       margin-top: 30px;
@@ -1191,6 +1232,9 @@ body{
     }
   }
   .footer-text{
+    &.text,.text{
+      font-size: 20px;
+    }
     p{
       color: #616161;
       margin-bottom: 30px;
@@ -1635,9 +1679,7 @@ padding-bottom: 240px;
             margin-bottom: 2px !important;
           }
           @media (max-width: 767px){
-      
-            margin-top: 60px;
-
+            margin-top: 0px;
           }
           @media (max-width: 600px){
             font-size: 21px;
@@ -1793,6 +1835,7 @@ padding-bottom: 240px;
       margin-top: 104px;
       @media (max-width: 991px) {
         font-size: 32px;
+        margin-top: 32px;
       }
     }
     .slidecontainer {
@@ -1800,7 +1843,7 @@ padding-bottom: 240px;
       max-width: 632px;
       margin: 0 auto;
       position: relative;
-     
+
       @media (max-width: 991px) {
         width: 80%;
       }
@@ -2001,7 +2044,7 @@ padding-bottom: 240px;
 
             color: #0d193f;
 
-            opacity: 0.8; 
+            opacity: 0.8;
             @media (max-width: 767px) {
               font-size: 18px;
             }
@@ -2144,6 +2187,7 @@ padding-bottom: 240px;
     }
   }
 }
+
 
 .switch {
   position: relative;
